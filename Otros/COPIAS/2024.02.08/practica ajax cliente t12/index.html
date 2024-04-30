@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script>
+        function cargarProvincias() {
+            // Creamos objeto XMLHttpRequest de Javascript
+            const xhttp = new XMLHttpRequest();
+            
+            // Definir la función de manejo de la respuesta
+            xhttp.onload = function(){
+                document.getElementById("provincias").innerHTML = xhttp.responseText;
+            };
+            
+            // Abrir la petición al servidor
+            xhttp.open("GET", "provincias.php", true);
+            
+            // Enviar la petición
+            xhttp.send();
+        }
+
+        function cargarXML() {
+            // Creamos objeto XMLHttpRequest de Javascript
+            const xhttp = new XMLHttpRequest();
+
+            // Definir la función de manejo de la respuesta XML
+            xhttp.onload = function () {
+                const xmlDoc = xhttp.responseXML;
+                cargarDatosXML(xmlDoc); // Llamar a cargarDatosXML con xmlDoc
+            };
+
+            // Enviamos la petición al servidor para obtener el archivo XML
+            xhttp.open("GET", "informacion.xml", true);
+            xhttp.send();
+        }
+
+        function cargarDatosXML(xmlDoc) {
+            // Obtener la tabla donde se mostrará el resultado
+            const table = document.getElementById("resultado");
+
+            // Limpiar la tabla antes de agregar nuevos datos
+            table.innerHTML = "";
+
+            // Obtener la lista de elementos "provincia" del XML
+            const provincias = xmlDoc.getElementsByTagName("provincia");
+
+            // Iterar sobre cada elemento "provincia"
+            for (let i = 0; i < provincias.length; i++) {
+                // Obtener los valores de nombre, superficie y habitantes
+                const nombre = provincias[i].getElementsByTagName("nombre")[0].textContent;
+                const superficie = provincias[i].getElementsByTagName("superficie")[0].textContent;
+                const habitantes = provincias[i].getElementsByTagName("habitantes")[0].textContent;
+
+                // Crear una fila en la tabla con los datos
+                const row = table.insertRow();
+                const cell1 = row.insertCell(0);
+                const cell2 = row.insertCell(1);
+                const cell3 = row.insertCell(2);
+
+                // Agregar los datos a las celdas
+                cell1.innerHTML = nombre;
+                cell2.innerHTML = superficie;
+                cell3.innerHTML = habitantes;
+            }
+        }
+    </script>
+</head>
+<body>
+    <input type="text" placeholder="Para ver si es asíncrono" value="">
+    <button onclick="cargarProvincias()">Cargar Provincias</button>
+    <div id="provincias"></div>
+
+    <!-- Cambié el botón para que llame directamente a cargarXML -->
+    <button onclick="cargarXML()">Cargar XML</button>
+    <table border="1" id="resultado"></table>
+</body>
+</html>

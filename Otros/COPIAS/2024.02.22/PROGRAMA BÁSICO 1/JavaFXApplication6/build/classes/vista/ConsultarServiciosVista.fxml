@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.effect.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="804.0" prefWidth="1535.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controlador.ConsultarServiciosController">
+   <children>
+      <DatePicker fx:id="dpFechaInicio" layoutX="83.0" layoutY="227.0" prefHeight="35.0" prefWidth="182.0" />
+      <Label layoutX="145.0" layoutY="188.0" text="Desde:">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="353.0" layoutY="190.0" text="Hasta:">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <TableView fx:id="tablaEntradas" layoutX="98.0" layoutY="373.0" prefHeight="337.0" prefWidth="1394.0">
+        <columns>
+          <TableColumn fx:id="tcReg" prefWidth="86.0" text="Nº REGISTRO" />
+          <TableColumn fx:id="tcMat" prefWidth="97.0" text="MATRÍCULA" />
+          <TableColumn fx:id="tcMar" prefWidth="86.0" text="MARCA" />
+          <TableColumn fx:id="tcMod" prefWidth="108.0" text="MODELO" />
+          <TableColumn fx:id="tcCol" minWidth="0.0" prefWidth="89.0" text="COLOR" />
+          <TableColumn fx:id="tcTip" prefWidth="73.0" text="TIPO" />
+          <TableColumn fx:id="tcSer" prefWidth="81.0" text="SERVICIO" />
+          <TableColumn fx:id="tcMot" prefWidth="75.0" text="MOTIVO" />
+          <TableColumn fx:id="tcCon" prefWidth="85.0" text="CONDUCTOR" />
+          <TableColumn fx:id="tcGru" prefWidth="65.0" text="GRÚA" />
+          <TableColumn fx:id="tcDiaSal" prefWidth="115.0" text="DÍA SALIDA" />
+          <TableColumn fx:id="tcDir" prefWidth="83.0" text="DIRECCCIÓN" />
+          <TableColumn fx:id="tcDiaEnt" prefWidth="152.0" text="DÍA ENTRADA" />
+          <TableColumn prefWidth="75.0" text="PLAZA" />
+        </columns>
+      </TableView>
+      <DatePicker fx:id="dpFechaFin" layoutX="289.0" layoutY="225.0" prefHeight="35.0" prefWidth="192.0" />
+      <Label layoutX="106.0" layoutY="272.0" text="Servicio:">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Button fx:id="btnVolver" layoutX="98.0" layoutY="728.0" mnemonicParsing="false" onAction="#closeWindows" prefHeight="58.0" prefWidth="158.0" text="VOLVER">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Button>
+      <Label layoutX="445.0" layoutY="125.0" text="Matrícula:">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtMatricula" layoutX="563.0" layoutY="113.0" prefHeight="58.0" prefWidth="221.0" />
+      <Label layoutX="535.0" layoutY="29.0" text="VER TODOS LOS VEHÍCULOS">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Label>
+      <Label layoutX="559.0" layoutY="190.0" text="Marca:">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="720.0" layoutY="190.0" text="Modelo:">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="919.0" layoutY="190.0" text="Color:">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="1085.0" layoutY="192.0" text="Nº Registro:">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="302.0" layoutY="276.0" text="Motivo:">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="461.0" layoutY="276.0" text="Conductor:">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="666.0" layoutY="274.0" text="Grúa:">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="922.0" layoutY="273.0" text="Dirección:">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtNumReg" layoutX="1067.0" layoutY="225.0" prefHeight="35.0" prefWidth="166.0" />
+      <TextField fx:id="txtModelo" layoutX="700.0" layoutY="225.0" prefHeight="35.0" prefWidth="158.0" />
+      <TextField fx:id="txtColor" layoutX="887.0" layoutY="225.0" prefHeight="35.0" prefWidth="158.0" />
+      <TextField fx:id="txtServicio" layoutX="80.0" layoutY="310.0" prefHeight="43.0" prefWidth="149.0" />
+      <TextField fx:id="txtMotivo" layoutX="242.0" layoutY="310.0" prefHeight="43.0" prefWidth="166.0" />
+      <TextField fx:id="txtConductor" layoutX="428.0" layoutY="310.0" prefHeight="43.0" prefWidth="166.0" />
+      <TextField fx:id="txtGrua" layoutX="621.0" layoutY="310.0" prefHeight="43.0" prefWidth="158.0" />
+      <TextField fx:id="txtDireccion" layoutX="799.0" layoutY="310.0" prefHeight="43.0" prefWidth="434.0" />
+      <TextField fx:id="txtMarca" layoutX="515.0" layoutY="225.0" prefHeight="35.0" prefWidth="158.0" />
+      <ToggleButton fx:id="tbDeposito" layoutX="860.0" layoutY="116.0" mnemonicParsing="false" onAction="#filtrarDeposito" prefHeight="35.0" prefWidth="244.0" text="En el depósito" textAlignment="CENTER" wrapText="true">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </ToggleButton>
+      <Button fx:id="btnLimpiar" layoutX="1248.0" layoutY="225.0" mnemonicParsing="false" onAction="#limpiarCampos" prefHeight="129.0" prefWidth="244.0" text="Limpiar filtros y ver todos" textAlignment="CENTER" wrapText="true">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Button>
+      <Button layoutX="1356.0" layoutY="732.0" mnemonicParsing="false" text="IMPRIMIR">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

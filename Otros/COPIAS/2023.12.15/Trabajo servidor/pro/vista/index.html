@@ -1,0 +1,43 @@
+
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maresp - Tienda Online</title>
+    <link rel="stylesheet" href="\Proyectos\Trabajo servidor\pro\vista\css\styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+          
+        </nav>
+    </header>
+
+    <main>
+      
+        <div class="container">
+            <div id="imgLogo">
+                <img src="\Proyectos\Trabajo servidor\pro\vista\img/logo.png" width="30%">   
+            </div>
+            <form name="formularioLogin" method="post" action="\Proyectos\Trabajo servidor\pro\modelo/conexion.php" class="login-form">
+                <input type="email" placeholder="Correo electrónico" name="email"  required>
+                <br>
+                <input type="password" placeholder="Contraseña" name="contraseña" >
+                <br>
+                <button type="submit">Iniciar Sesión</button>
+            </form>
+            <br>
+            
+            <br>
+            <div class="social-login" >
+                <button class="google">Iniciar con Google</button>
+                <button class="facebook" >Iniciar con Facebook</button>
+            </div>
+            <p class="register-link">¿No tienes cuenta?</p>
+            <a href="V_registrarme.php">Regístrate aquí</a>
+        </div>
+    </main>
+</body>
+</html>

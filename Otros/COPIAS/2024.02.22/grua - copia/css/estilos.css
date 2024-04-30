@@ -1,0 +1,367 @@
+/* Estilos para el cuerpo de la página */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 10px;
+}
+
+/* Estilos para el encabezado */
+header {
+    color: #fff;
+    text-align: center;
+    position: relative;
+    
+}
+#imgSinIVA{
+    width: 100%;
+    max-width: 700px;
+}
+#tabla{
+    width: 100%;
+}
+.grua{
+    width: 80%; /* Cambia el porcentaje al 100% para ocupar todo el ancho disponible */
+    max-width: 900px; /* Anula el ancho máximo establecido */
+    padding: 0; /* Elimina el relleno si no es necesario */
+    margin: 0; /* Elimina cualquier margen si lo hay */
+}
+#divPoli, #divAyto {
+    float: left;
+    width: 50%; 
+    font-size: 30px;
+    padding: 10px 0px;
+ 
+}
+ 
+#imgAyto {
+    margin-top: 20px;
+    margin-bottom: 40px;
+   
+}
+#imgPoli {
+    margin-top: 20px;
+}
+
+#atencion {
+    margin-top: 40px;
+    padding: 20px;
+}
+#spAtencion{
+    padding-left: 10px;
+    padding-right: 10px;
+}
+/* Estilo base del botón */
+.nav-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/* Estilos para los radios y labels */
+input[type="radio"] {
+  display: none; /* Oculta los radios */
+}
+
+
+label {
+  margin-bottom: 70px;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+/* Estilo del círculo del radio */
+label:before {
+  width: auto ;
+  border: 2px solid #333; /* Color del borde del círculo */
+  border-radius: 50%;
+  padding: 20px;
+
+}
+
+/* Estilo del punto interior del radio seleccionado */
+input[type="radio"]:checked + label:before {
+  background-color: rgb(0, 24, 244); /* Color del punto cuando está seleccionado */
+  color: white;
+}
+#lcoche:before{
+    content: 'Coche';
+    
+}
+#lmoto:before{
+    content: 'Moto';
+}
+
+
+
+
+h3 {
+  font-size: 20px;
+  margin-bottom: 5px;
+}
+
+
+.nava {
+    font-size: 40px;
+    padding: 12px 20px;
+    border-radius: 8px;
+    color: #333;
+    background-color: #f0f0f0;
+    border: 2px solid #333;
+    transition: all 0.3s ease;
+    margin: 10px; /* Espacio entre los elementos */
+}
+
+/* Efecto al pasar el cursor sobre el elemento */
+.nava:hover {
+    color: #00bcd4;
+    background-color: #333; /* Cambio a un tono azul al pasar el cursor */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transform: translateY(-2px);
+}
+
+/* Estilos para la barra de navegación */
+nav {
+    text-align: center;
+    padding: 20px 0;
+}
+
+
+
+
+
+/* Estilos para el div con la clase "divsPrincipales" */
+.divsPrincipales {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin:auto;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-bottom: 20px; /* Añade un margen inferior para separar los elementos */
+    margin-top: 30px;
+    border-radius: 8px;
+}
+
+ .divsPreguntas {
+    text-align: left; /* Alinea el texto a la izquierda */
+    margin: 0 auto; /* Establece un margen automático en los lados para centrar el contenido */
+    max-width: 800px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
+    padding-left: 40px;
+    padding-right: 40px;
+    margin-bottom:20px; /* Añade un margen inferior para separar los elementos */
+    margin-top: 30px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-radius: 8px;
+}
+
+#pagoServicio, #paSinCargo {
+    text-align: left; /* Alinea el texto a la izquierda */
+    margin: 0 auto; /* Establece un margen automático en los lados para centrar el contenido */
+    max-width: 800px;
+   
+}
+
+/* Estilos para el formulario dentro de "divsPrincipales" */
+#formconsultaVehiclo {
+    text-align: center;
+}
+
+/* Estilos para las etiquetas de los formularios */
+label {
+    display: block;
+    font-weight: bold;
+}
+
+/* Estilos para el campo de entrada de matrícula */
+#matricula {
+        border: 2px solid #333;
+        width: 40%; /* Aumenta el ancho del campo de entrada al 80% del contenedor */
+        height: 70px;
+        font-size: 30px; /* Ajusta el tamaño de la fuente a 16px */
+        text-align: center;
+        max-width: 280px;
+        margin: 20px;
+        border-radius: 8px; /* Bordes más redondeados */
+}
+#matricula:hover {
+    
+    cursor: pointer; 
+}
+
+/* Estilos para el botón de "Comprobar" en el formulario */
+#comprobar {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    margin: 10px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    height: 90px;
+  width: 0 auto;
+    font-size: 30px; /* Ajusta el tamaño de la fuente a 16px */
+    text-align: center;;
+}
+
+#comprobar:hover {
+    background-color: #007c87;
+}
+
+
+
+#maps {
+    width: 98%;
+    height: 500px;
+}
+
+
+/* TASAS  */
+
+#fechaEntrada, #fechaSalida {
+    background-color: #fff;
+    border: 3px solid black;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    font-size: x-large;
+    border-radius: 8px;
+    padding: 10px;
+    text-decoration: none ;
+    width: 0 auto;
+ 
+    height: 60px;
+    text-align: center;
+   
+}
+
+#btnCalcular {
+        background-color: #333;
+        color: white;
+        padding-left: 20px;
+        padding-right: 20px;
+        border: none;
+        cursor: pointer;
+        transition: background-color 0.3s;
+        width: 0 auto; /* Aumenta el ancho del campo de entrada al 80% del contenedor */
+        font-size: 30px; /* Ajusta el tamaño de la fuente a 16px */
+        text-align: center;
+        max-width: 300px;
+        border-radius: 8px;
+
+
+}
+#btnCalcular:hover {
+    background-color: #007c87;
+}
+
+
+#btnVolver{
+        background-color: #333;
+        color: white;
+        padding-left: 20px;
+        padding-right: 20px;
+        border: none;
+        cursor: pointer;
+        transition: background-color 0.3s;
+        text-align: center;
+        border-radius: 8px;
+        margin: auto 0;
+     
+}
+
+#btnVolver:hover{
+    background-color: #007c87;
+}
+
+/* Estilos para el pie de página */
+footer {
+    margin-top: 300px;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+   
+
+}
+summary{
+    cursor: pointer;
+    list-style: none;
+    
+}
+#lastFooter{
+    text-align: center;
+
+}
+.suFoot{
+    text-align: left;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+#SiNe{
+    padding-left: 20px;
+    padding-right: 20px;
+}
+/* Estilos para los enlaces */
+a {
+    color: #00bcd4;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+a:hover {
+    color: #007c87;
+}
+                                                /*MEDIA*/
+
+
+/* Media Queries para dispositivos móviles */
+@media (max-width: 768px) {
+    /* Ejemplos de estilos para dispositivos móviles */
+    body {
+        padding: 5px;
+    }
+   
+    .nava {
+        font-size: 30px;
+    }
+
+
+
+    /* Agregar otros estilos para dispositivos móviles aquí */
+}
+
+/* Media Queries para tabletas y pantallas medianas */
+@media (min-width: 769px) and (max-width: 1024px) {
+    /* Ejemplos de estilos para tabletas y pantallas medianas */
+    body {
+        padding: 10px;
+    }
+    #fechaEntrada, #fechaSalida {
+        font-size: xx-large;
+    }
+
+    .nava {
+        font-size: 40px;
+    }
+
+    /* Agregar otros estilos para tabletas y pantallas medianas aquí */
+}
+
+/* Media Queries para pantallas más grandes */
+@media (min-width: 1025px) {
+    /* Ejemplos de estilos para pantallas más grandes */
+    body {
+        padding: 20px;
+    }
+
+    .nava {
+        font-size: 28px;
+    }
+
+    /* Agregar otros estilos para pantallas más grandes aquí */
+}

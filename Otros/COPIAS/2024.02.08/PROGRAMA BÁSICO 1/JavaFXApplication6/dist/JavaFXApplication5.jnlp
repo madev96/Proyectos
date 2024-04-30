@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<jnlp spec="1.0" xmlns:jfx="http://javafx.com" href="JavaFXApplication5.jnlp">
+  <information>
+    <title>JavaFXApplication5</title>
+    <vendor>996ma</vendor>
+    <description>null</description>
+    <offline-allowed/>
+  </information>
+  <resources>
+    <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
+    <jar href="JavaFXApplication5.jar" size="66029" download="eager" />
+    <jar href="lib\jfoenix-9.0.1.jar" size="2143605" download="eager" />
+    <jar href="lib\mysql-connector-j-8.1.0.jar" size="2485905" download="eager" />
+  </resources>
+  <jfx:javafx-desc  width="800" height="600" main-class="controlador.Main"  name="JavaFXApplication5" />
+  <update check="always"/>
+</jnlp>

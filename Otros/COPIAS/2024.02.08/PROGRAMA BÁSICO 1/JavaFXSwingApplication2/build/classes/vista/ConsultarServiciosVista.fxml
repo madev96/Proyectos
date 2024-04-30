@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="431.0" prefWidth="765.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controlador.ConsultarServiciosController">
+   <children>
+      <DatePicker fx:id="dtpFechaInicial" layoutX="58.0" layoutY="74.0" />
+      <Label layoutX="100.0" layoutY="41.0" text="DESDE LA FECHA" />
+      <Label layoutX="336.0" layoutY="41.0" text="HASTA LA FECHA" />
+      <TableView fx:id="tblServicios" layoutX="32.0" layoutY="157.0" prefHeight="206.0" prefWidth="701.0">
+        <columns>
+          <TableColumn fx:id="colMatricula" prefWidth="75.0" text="MATRICULA" />
+          <TableColumn fx:id="colMarca" prefWidth="134.0" text="MARCA" />
+            <TableColumn fx:id="colPrecio" prefWidth="69.0" text="PRECIO" />
+            <TableColumn fx:id="colFechaAlquiler" prefWidth="114.0" text="FECHA ALQUILER" />
+            <TableColumn fx:id="colFechaEntrega" minWidth="0.0" prefWidth="109.0" text="FECHA ENTREGA" />
+            <TableColumn fx:id="colTotal" prefWidth="44.0" text="TOTAL" />
+        </columns>
+      </TableView>
+      <DatePicker fx:id="dtpFechaFinal" layoutX="296.0" layoutY="74.0" />
+      <ComboBox fx:id="cmbClientes" layoutX="546.0" layoutY="74.0" prefWidth="150.0" promptText="Todos" />
+      <Label layoutX="589.0" layoutY="41.0" text="SERVICIO" />
+   </children>
+</AnchorPane>

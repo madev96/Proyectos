@@ -1,0 +1,375 @@
+<!--http://localhost/Proyectos/Gr%C3%BAa%20Web%202/index.html-->
+
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>Grúa Municipal - Alcalá</title>
+    <meta charset="UTF-8">
+    <meta name="description"content="width=device-width, initial-scale=1"> <!--Esto tengo que mirarlo bien-->
+    <meta name="ketwords" content="HTML, CSS, JavaScript">
+    <link href="css/estilos.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <button onclick="toggleDarkMode()">Modo Nocturno</button>
+
+    <header>
+        <div class="" id="divPoli">
+            <a href="https://seguridadciudadana.ayto-alcaladehenares.es/policia-local/" target="_blank">
+                <img id="imgPoli" src="img/poli.png" width="250px" height="65px">
+            </a> 
+         </div>
+         <div class="" id="divAyto">
+            <a href="https://www.ayto-alcaladehenares.es/" target="_blank">
+            <img id="imgAyto" src="img/ayto3.png" width="200px" height="65px">
+            </a> 
+         </div>
+        <a href="index.html"  class="encabezado">                                              
+         <img class="grua" src="img/G2.png" alt="Link a la página de inicio Grúa Municipal de Alcalá de Henares">
+        </a>
+      
+        <nav>   
+            <div class="nav-container">
+                <a class="nava" id="nt" href="tasas.html" >Tasas</a> 
+                <a class="nava" id="nd" href="documentacion_necesaria.html" >Documentación</a> 
+                <a class="nava" id="np" href="preguntas_frecuentes.html" >Preguntas</a>
+            </div>
+        </nav>
+    </header>
+ 
+    <main>    
+        <!--Pago del servicio de grúa.-->
+        <div class="divsPrincipales" id="">
+            <br>
+            <h2>Pago del servicio de grúa.</h2><br>
+            <div id="pagoServicio">
+                <p>Se debe abonar la tasa en el <a target="_blank" href="https://www.google.es/maps/place/Gr%C3%BAa+Municipal+de+Alcal%C3%A1+de+Henares/@40.4838512,-3.3862214,17z/data=!3m1!4b1!4m6!3m5!1s0xd42499f577e3769:0x7a62c38e5efb88ce!8m2!3d40.4838471!4d-3.3836465!16s%2Fg%2F11bwpz6ykd?entry=ttu"> <strong>depósito </strong></a>de forma previa a la recogida del vehículo.</p>
+                <br>
+                <p><strong>Forma de pago: </strong>Únicamente se aceptan pagos en efectivo, tarjeta o ambas opciones. No se admite Bizum ni transferencias bancarias.</p><br>
+                <p> El abono de esta tasa <strong>no libera, en ningún caso, de la obligación del <a href="https://sede.ayto-alcaladehenares.es/sta/CarpetaPublic/doEvent?APP_CODE=STA&PAGE_CODE=PTS2_PAGO" target="_blank">pago de las sanciones o multas</strong></a> derivadas de infracciones a las normativas de circulación o de Policía Local.</p>
+                <br>
+            </div>
+        </div>
+
+        <!--CALCULADOR DE TASAS.-->
+        <div class="divsPrincipales" id="calculador">
+            <br>
+            <h2>Calculador de tasa.</h2>
+            <form id="formCalcularTasas">
+            
+                <br><br>
+
+                <h3 for="fechaEntrada">Fecha de entrada:</h3>
+                
+                <input type="datetime-local" class="calculoFecha" id="fechaEntrada" name="fechaEntrada"  required>
+                <br><br><br>
+                
+                <h3 for="fechaSalida">Fecha de salida:</h3>
+                
+                <input type="datetime-local" class="calculoFecha" id="fechaSalida" name="fechaSalida" required>
+                <br><br><br>
+                
+                    <br><br>
+                    <input type="radio" name="opciones" value="coche" id="cocheRadio">
+                    <label for="cocheRadio" id="lcoche"></label>
+                
+                    <input type="radio" name="opciones" value="moto" id="motoRadio">
+                    <label for="motoRadio" id="lmoto"></label>
+              
+                <h3 id="resultado"></h3>
+                <h3 id="resultado2"></h3>
+                <br><br>
+                <button id="btnCalcular" type="button" onclick="calcular()"><h3>Calcular</h3></button>
+                <br><br><br>
+            </form>
+
+          
+
+            <!--BUCLES NECESARIOS PARA CALCULADORA DE TASAS-->
+            <script>
+                function calcular() {
+                    const opcionSeleccionada = document.querySelector('input[name="opciones"]:checked');
+                    const fechaEntrada = new Date(document.getElementById('fechaEntrada').value);
+                    const fechaSalida = new Date(document.getElementById('fechaSalida').value);
+                    
+                    const resultado = document.getElementById('resultado');
+                    const resultado2 = document.getElementById('resultado2');
+                    
+                    resultado.textContent = '';
+                    resultado2.textContent = '';
+                
+                    if (!opcionSeleccionada && (!fechaEntrada || !fechaSalida)) {
+                        resultado.textContent = "Selecciona tipo de vehículo y";
+                        resultado2.textContent = "ingresa fechas válidas.";
+                    } else if (!opcionSeleccionada) {
+                        resultado.textContent = "Selecciona tipo de vehículo.";
+                    } else if (!fechaEntrada || !fechaSalida) {
+                        resultado2.textContent = "Ingresa fechas válidas.";
+                    } else {
+                        const vehiculo = opcionSeleccionada.value;
+                
+                        if (!isNaN(fechaEntrada) && !isNaN(fechaSalida) && fechaEntrada < fechaSalida) {
+                            const diffTiempo = fechaSalida - fechaEntrada;
+                            const diffDias = Math.floor(diffTiempo / (1000 * 60 * 60 * 24));
+                            const diffHoras = Math.floor((diffTiempo % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                            const diffMinutos = Math.floor((diffTiempo % (1000 * 60 * 60)) / (1000 * 60));
+                
+                            resultado2.textContent = `${diffDias} día/s, ${diffHoras} hora/s y ${diffMinutos} minuto/s.`;
+                
+                            // Continuar con los cálculos según el tipo de vehículo
+                            if (vehiculo == "coche") {
+                                if (!isNaN(fechaEntrada) && !isNaN(fechaSalida)) {
+                                if (fechaEntrada < fechaSalida) {
+                                    const diffTiempo = fechaSalida - fechaEntrada;
+                                    const diffDias = Math.floor(diffTiempo / (1000 * 60 * 60 * 24)); //Math foor se usa para redondear el resultado al número entero
+                                    const diffHoras = Math.floor((diffTiempo % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                                    const diffMinutos = Math.floor((diffTiempo % (1000 * 60 * 60)) / (1000 * 60));
+
+                                    document.getElementById('resultado2').textContent = `${diffDias} día/s, ${diffHoras} hora/s y ${diffMinutos} minuto/s.`;
+
+
+
+                                                                                        // TASA PARA UN COCHE QUE LLEVA MENOS DE 1 DÍA.
+                                    if (diffDias == 0){
+                                        switch (diffHoras) {
+                                            case 0:
+                                                document.getElementById('resultado').textContent =`Precio: 183,86€`;
+                                                break;
+                                            case 1:
+                                                document.getElementById('resultado').textContent =`Precio: 185,49€`;
+                                                break;
+                                            case 2:
+                                                document.getElementById('resultado').textContent =`Precio: 187,12€`;
+                                                break;
+                                            case 3:
+                                                document.getElementById('resultado').textContent =`Precio: 188,75€`;
+                                                break;
+                                            case 4:
+                                                document.getElementById('resultado').textContent =`Precio: 190,38€`;
+                                                break;
+                                            case 5:
+                                                document.getElementById('resultado').textContent =`Precio: 192,01€ `;
+                                                break;
+                                            case 6:
+                                                document.getElementById('resultado').textContent =`Precio: 193,64€`;
+                                                break;
+                                            case 7:
+                                                document.getElementById('resultado').textContent =`Precio: 195,27€`;
+                                                break;
+                                            case 8:
+                                                document.getElementById('resultado').textContent =`Precio: 196,75€`;
+                                                break;
+                                            default:
+                                                document.getElementById('resultado').textContent =`Precio: 196,75€`;
+                                        }
+
+
+                                                                                            // TASA PARA UN COCHE QUE LLEVA MENOS DE 30 DÍAS
+                                    } else if (diffDias <= 29){
+                                        var tasa= (196.75 + (diffDias * 15.25));
+                                        var tasaConDosDecimales = tasa.toFixed(2); // Establecer dos decimales
+
+                                        // Formatear el número con separadores de miles y dos decimales
+                                        var tasaFormateada = parseFloat(tasaConDosDecimales).toLocaleString('es-ES', {
+                                            minimumFractionDigits: 2,
+                                            maximumFractionDigits: 2
+                                        });
+
+                                        document.getElementById('resultado').textContent =`Precio: ${tasaFormateada} €`;
+
+
+
+                                                                                            // TASA PARA UN COCHE QUE LLEVA MÁS DE 30 DÍAS
+
+
+                                    } else if (diffDias >= 30 && diffDias <=65){
+                                        var tasa= (639 + ((diffDias - 29) * 30.86));
+                                        var tasaConDosDecimales = tasa.toFixed(2); // Establecer dos decimales
+
+                                        // Formatear el número con separadores de miles y dos decimales
+                                        var tasaFormateada = parseFloat(tasaConDosDecimales).toLocaleString('es-ES', {
+                                            minimumFractionDigits: 2,
+                                            maximumFractionDigits: 2
+                                        });
+
+                                        document.getElementById('resultado').textContent =`Precio: ${tasaFormateada} €`;
+
+
+                                                                                                // MÁS DE 2 MESES DESGUACE.
+
+
+
+                                    }else if (diffDias > 65){
+                                        
+                                        document.getElementById('resultado').innerHTML =`El tiempo máximo permitido para que un vehículo permanezca en el depósito es de dos meses. <br><br> Transcurrido este período, el desguace <a target="_blank" href="https://www.elchoque.com" >El Choque</a> asume la responsabilidad de su disposición y gestión conforme a los procedimientos establecidos`;
+
+                                                                                                // fECHAS INCORRECTAS.
+
+                                } else {
+                                document.getElementById('resultado2').textContent = "La hora de entrada no puede ser igual o posterior a la de salida.";
+                                }
+                            } else {
+                                document.getElementById('resultado2').textContent = "Ingresa fechas y horas válidas.";
+                            }
+                        }
+                            } else if (vehiculo == "moto") {
+                                if (!isNaN(fechaEntrada) && !isNaN(fechaSalida)) {
+                            if (fechaEntrada < fechaSalida) {
+                                const diffTiempo = fechaSalida - fechaEntrada;
+                                const diffDias = Math.floor(diffTiempo / (1000 * 60 * 60 * 24)); //Math foor se usa para redondear el resultado al número entero
+                                const diffHoras = Math.floor((diffTiempo % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                                const diffMinutos = Math.floor((diffTiempo % (1000 * 60 * 60)) / (1000 * 60));
+
+                                document.getElementById('resultado2').textContent = `${diffDias} día/s, ${diffHoras} hora/s y ${diffMinutos} minuto/s.`;
+
+
+
+                                                                                    // TASA PARA UNA MOTO QUE LLEVA MENOS DE 1 DÍA.
+                                if (diffDias == 0){
+                                    switch (diffHoras) {
+                                        case 0:
+                                            document.getElementById('resultado').textContent =`Precio: 84,76€`;
+                                            break;
+                                        case 1:
+                                            document.getElementById('resultado').textContent =`Precio: 85,79€`;
+                                            break;
+                                        case 2:
+                                            document.getElementById('resultado').textContent =`Precio: 86,82€`;
+                                            break;
+                                        case 3:
+                                            document.getElementById('resultado').textContent =`Precio: 87,12€`;
+                                            break;
+                                        default:
+                                            document.getElementById('resultado').textContent =`Precio: 87,12€`;
+                                    }
+
+
+                                                                                        // TASA PARA UNA MOTO QUE LLEVA MENOS DE 30 DÍAS
+                                } else if (diffDias <= 29){
+                                    var tasa= (87.12 + (diffDias * 3.63));
+                                    var tasaConDosDecimales = tasa.toFixed(2); // Establecer dos decimales
+
+                                    // Formatear el número con separadores de miles y dos decimales
+                                    var tasaFormateada = parseFloat(tasaConDosDecimales).toLocaleString('es-ES', {
+                                        minimumFractionDigits: 2,
+                                        maximumFractionDigits: 2
+                                    });
+
+                                    document.getElementById('resultado').textContent =`Precio: ${tasaFormateada} €`;
+
+
+
+                                                                                        // TASA PARA UNA MOTO QUE LLEVA MÁS DE 30 DÍAS
+
+
+                                } else if (diffDias >= 30 && diffDias <=65){
+                                    var tasa= (192.39 + ((diffDias - 29) * 25.77));  //CAMBIAR EL 639
+                                    var tasaConDosDecimales = tasa.toFixed(2); // Establecer dos decimales
+
+                                    // Formatear el número con separadores de miles y dos decimales
+                                    var tasaFormateada = parseFloat(tasaConDosDecimales).toLocaleString('es-ES', {
+                                        minimumFractionDigits: 2,
+                                        maximumFractionDigits: 2
+                                    });
+
+                                    document.getElementById('resultado').textContent =`Precio: ${tasaFormateada} €`;
+
+
+                                                                                            // MÁS DE 2 MESES DESGUACE.
+
+
+
+                                }else if (diffDias > 65){
+                                    
+                                    document.getElementById('resultado').innerHTML =`El tiempo máximo permitido para que un vehículo permanezca en el depósito es de dos meses. <br><br> Transcurrido este período, el desguace <a target="_blank" href="https://www.elchoque.com" >El Choque</a> asume la responsabilidad de su disposición y gestión conforme a los procedimientos establecidos`;
+
+                                                                                            // fECHAS INCORRECTAS.
+
+                            } else {
+                            document.getElementById('resultado2').textContent = "La hora de entrada no puede ser igual o posterior a la de salida.";
+                            }
+                        } else {
+                            document.getElementById('resultado2').textContent = "Ingresa fechas y horas válidas.";
+                        }
+                    }
+                
+                            }
+                        } else {
+                            resultado2.textContent = "Ingresa fechas y horas válidas.";
+                            if (fechaEntrada >= fechaSalida) {
+                                resultado2.textContent = "La hora de entrada no puede ser igual o posterior a la de salida.";
+                            }
+                        }
+                    }
+                }
+            </script>
+        </div>
+
+        <!--TASAS APLICABLES.-->
+        <div class="divsPrincipales" id="tasas">
+            <br>
+            <h2>Tasas de retirada y depósito. (<i>con I.V.A</i>)</h2>
+            <br>
+                <a href="img/sinIVA.png" >
+                    <img  id="imgSinIVA" src="img/sinIVA.png">
+                </a>
+            <p> <a href="img/tasas.pdf" download="tasas.pdf">Descargar </a>la Ordenanza Reguladora de la Tasa por Retirada de Vehículos de la Vía Pública.</p> 
+            <br>
+        </div>
+
+            
+        <!--EXENTOS-->
+        <div class="divsPrincipales" id="">
+            <br>
+            <h2>Sin cargo de tasas de grúa.</h2>
+            <br> 
+            <div id="paSinCargo">
+                <p>En la aplicación de lo dispuesto en artículo XXX de la Ordenaza de Movilidad Sostenible para la Ciudad de Beteta, no devengará tasa de retirada y los gastos de depósito los siguientes supestos: </p>
+                <br>
+                <ul>
+                    <li>En los casos de de sustracción ni cuando el servicio de retirada del vehículo se preste con el objeto de permitir la realización de obras en la vía públic</li>
+                    <br>
+                    <li>aquellas actuaciones que para las que se cuente con la debida autorización administrativa, salvo que haya sido debidamente anunciada y señalizada con cuarenta y ocho horas de antelación.</li>
+                </ul>
+                <br>
+            </div>
+        </div>
+
+    </main>
+</body>
+
+<footer>
+    <br>
+    <!-- Desplegable de "Nuestros Servicios" -->
+    <details>
+        <summary><strong>Nuestros Servicios</strong></summary>
+        <small>
+            <br>
+            <p class="suFoot">La Grúa Municipal de Alcalá de Henares es un servicio público que tiene como objetivo garantizar la seguridad vial y el cumplimiento de las normativas de tráfico en nuestra ciudad.</p>
+            <br><br>
+            <p class="suFoot">El servicio de la Grúa Municipal también se encarga de retirar los vehículos mal estacionados, abandonados o que obstaculizan el tráfico en las calles de Alcalá y de depositar los vehículos en nuestro depósito municipal, donde se garantiza la seguridad y custodia de los mismos.</p>
+            <br><br>
+            <p class="suFoot">De esta manera, se busca mejorar la fluidez del tráfico y garantizar la seguridad de peatones y conductores.</p>
+        </small>
+    </details>
+    <br><br>
+    <!-- Desplegable de "Nosotros" -->
+    <details>
+        <summary><strong>Sobre nosotros</strong></summary>
+        <small >
+            <br>
+            <p class="suFoot">Nuestro equipo de profesionales altamente capacitados se esfuerza por brindar un servicio eficiente y de calidad a todos los ciudadanos, y estamos a su disposición las 24 horas del día, los 7 días de la semana. </p>
+            <br><br>
+            <p class="suFoot">Agradecemos su colaboración y compromiso en el cumplimiento de las normativas de tráfico y seguridad vial en nuestra ciudad.</p>
+        </small>
+    </details>
+<br>
+<hr>
+<br>
+<p id="SiNe"> Si necesita de nuestros servicios, no dude en contactar con la Policía Local. <br><br><a href="tel:092"> 092 </a> // <a href="tel:918306814"> 918306814 </a></p>
+<br>
+<p id="lastFooter">
+    <small>&copy; 2023 Todos los derechos reservados. <a id="mlm" href="https://www.linkedin.com/in/manuel-lozano-mart%C3%ADnez-ab7160204/"><b>M.L</b></a></small>
+</p>
+</footer>
+</html>

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" maxHeight="820.0" maxWidth="919.0" minHeight="725.0" minWidth="738.0" prefHeight="725.0" prefWidth="827.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controlador.FormularioAbrirParteController">
+   <children>
+      <Label layoutX="422.0" layoutY="372.0" prefHeight="13.0" prefWidth="71.0" text="h" textFill="#00000080">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label fx:id="labelAP" layoutX="243.0" layoutY="12.0" prefHeight="70.0" prefWidth="390.0" text="Abrir parte diario ">
+         <font>
+            <Font size="48.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER_RIGHT" layoutX="173.0" layoutY="129.0" prefHeight="35.0" prefWidth="167.0" text="Nombre:">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER_RIGHT" layoutX="173.0" layoutY="181.0" prefHeight="35.0" prefWidth="167.0" text="Grúa:">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER_RIGHT" layoutX="173.0" layoutY="233.0" prefHeight="35.0" prefWidth="167.0" text="Turno:">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="nombreConductor" layoutX="358.0" layoutY="128.0" prefHeight="37.0" prefWidth="197.0" />
+      <ComboBox fx:id="grua" layoutX="359.0" layoutY="179.0" prefHeight="39.0" prefWidth="197.0" />
+      <ComboBox fx:id="turno" layoutX="359.0" layoutY="233.0" prefHeight="40.0" prefWidth="197.0" />
+      <DatePicker fx:id="dpDia" editable="false" layoutX="359.0" layoutY="299.0" prefHeight="40.0" prefWidth="197.0" />
+      <Separator layoutX="143.0" layoutY="69.0" prefHeight="40.0" prefWidth="545.0" />
+      <Label alignment="CENTER_RIGHT" layoutX="179.0" layoutY="299.0" prefHeight="35.0" prefWidth="168.0" text="Día inicio:">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER_RIGHT" layoutX="180.0" layoutY="362.0" prefHeight="14.0" prefWidth="168.0" text="Hora inicio:">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <TextField fx:id="tfHora" layoutX="359.0" layoutY="365.0" prefHeight="35.0" prefWidth="62.0" />
+      <TextField fx:id="tfMin" layoutX="444.0" layoutY="365.0" prefHeight="35.0" prefWidth="62.0" text="00" />
+      <Label layoutX="506.0" layoutY="372.0" prefHeight="10.0" prefWidth="101.0" text="min" textFill="#00000080">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Button fx:id="btnImprimir" layoutX="221.0" layoutY="479.0" mnemonicParsing="false" onAction="#guardarDatos" prefHeight="138.0" prefWidth="408.0" text="Imprimir" textAlignment="CENTER">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnNo" layoutX="375.0" layoutY="623.0" mnemonicParsing="false" onAction="#closeWindows" prefHeight="56.0" prefWidth="101.0" text="No">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

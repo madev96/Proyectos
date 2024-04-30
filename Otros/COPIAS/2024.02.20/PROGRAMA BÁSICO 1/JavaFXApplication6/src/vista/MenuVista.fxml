@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="841.0" prefWidth="1181.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controlador.MenuController">
+   <children>
+      <VBox layoutX="61.0" layoutY="26.0" prefHeight="600.0" prefWidth="470.0">
+         <children>
+            <Button fx:id="btnIntroducir" alignment="CENTER" contentDisplay="CENTER" minHeight="150.0" minWidth="470.0" mnemonicParsing="false" onAction="#insertarServicios" prefHeight="258.0" prefWidth="470.0" text="Entrada de vehículo" textAlignment="CENTER">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnConsultar" alignment="CENTER" contentDisplay="CENTER" minHeight="150.0" minWidth="470.0" mnemonicParsing="false" onAction="#consultarServicios" prefHeight="268.0" prefWidth="470.0" text="Buscar vehículo/s" textAlignment="CENTER">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnSalida" alignment="CENTER" contentDisplay="CENTER" minHeight="150.0" minWidth="470.0" mnemonicParsing="false" onAction="#salidaDeServicios" prefHeight="260.0" prefWidth="470.0" text="Salida de vehículo" textAlignment="CENTER">
+               <font>
+                  <Font size="36.0" />
+               </font>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </Button>
+         </children>
+      </VBox>
+      <VBox layoutX="545.0" layoutY="266.0" prefHeight="153.0" prefWidth="90.0">
+         <children>
+            <Button fx:id="btnConsultarCajas" mnemonicParsing="false" onAction="#ConsultarCajas" prefHeight="51.0" prefWidth="131.0" text="Consultar cajas" textAlignment="CENTER" textFill="#0400f8" wrapText="true" />
+            <Button fx:id="btnTodosPartes" mnemonicParsing="false" onAction="#verTodos" prefHeight="58.0" prefWidth="264.0" text="Ver todos los partes" textAlignment="CENTER" textFill="#1100ff" wrapText="true" />
+         </children></VBox>
+      <VBox layoutX="644.0" layoutY="22.0" prefHeight="317.0" prefWidth="483.0">
+         <children>
+            <Button fx:id="cerrarPartes" alignment="CENTER" minHeight="150.0" minWidth="470.0" mnemonicParsing="false" onAction="#cerrarParte" prefHeight="51.0" prefWidth="355.0" text="Partes abiertos" textAlignment="CENTER">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnConsultarFacturas" alignment="CENTER" contentDisplay="CENTER" minHeight="150.0" minWidth="470.0" mnemonicParsing="false" onAction="#consultarFacturas" prefHeight="54.0" prefWidth="378.0" text="Consultar facturas" textAlignment="CENTER">
+               <font>
+                  <Font size="36.0" />
+               </font>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </Button>
+            <Button fx:id="btnACaja" alignment="CENTER" contentDisplay="CENTER" minHeight="150.0" minWidth="470.0" mnemonicParsing="false" onAction="#abrirCaja" prefHeight="51.0" prefWidth="288.0" text="Abrir un parte">
+               <font>
+                  <Font size="36.0" />
+               </font>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </Button>
+            <Button alignment="CENTER" contentDisplay="CENTER" minHeight="150.0" minWidth="470.0" mnemonicParsing="false" prefHeight="51.0" prefWidth="355.0" text="Retirada de objetos" textAlignment="CENTER">
+               <font>
+                  <Font size="36.0" />
+               </font>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </Button>
+         </children>
+      </VBox>
+      <HBox layoutX="168.0" layoutY="650.0" prefHeight="64.0" prefWidth="953.0">
+         <children>
+            <Label prefHeight="64.0" prefWidth="561.0" text="El turno está empezado desde las: ">
+               <font>
+                  <Font size="36.0" />
+               </font>
+               <effect>
+                  <Blend />
+               </effect>
+            </Label>
+            <Label fx:id="lTurnoEmpezado" prefHeight="64.0" prefWidth="382.0" text="17:28 99/99/9999">
+               <font>
+                  <Font size="36.0" />
+               </font>
+               <effect>
+                  <Blend />
+               </effect>
+            </Label>
+         </children>
+      </HBox>
+      <Button fx:id="btnCCaja" alignment="CENTER" contentDisplay="CENTER" layoutX="409.0" layoutY="724.0" minHeight="0.0" minWidth="316.0" mnemonicParsing="false" onAction="#cerrarCaja" prefHeight="78.0" prefWidth="362.0" text="Cambio de turno" textAlignment="CENTER">
+         <font>
+            <Font size="36.0" />
+         </font>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </Button>
+   </children>
+</AnchorPane>

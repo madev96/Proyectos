@@ -1,0 +1,255 @@
+/* Estilos para el cuerpo de la página */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 10px;
+}
+
+/* Estilos para el encabezado */
+header {
+    color: #fff;
+    text-align: center;
+    position: relative;
+    
+}
+#imgSinIVA{
+    width: 95%;
+}
+#tabla{
+    width: 100%;
+}
+.grua{
+    max-width: 500px;
+    padding: 50px;
+}
+#divPoli, #divAyto {
+    float: left;
+    width: 50%; 
+    font-size: 30px;
+    padding: 10px 0px;
+ 
+}
+ 
+#imgAyto {
+    margin-top: 20px;
+   
+}
+#imgPoli {
+    margin-top: 20px;
+}
+
+#atencion {
+    margin-top: 40px;
+    padding: 20px;
+}
+#spAtencion{
+    padding-left: 10px;
+    padding-right: 10px;
+}
+/* Estilo base del botón */
+.nava {
+   font-size: 30px;
+    padding: 12px 20px; /* Aumento del espacio interno */
+    border-radius: 8px; /* Bordes más redondeados */
+    color: #333; /* Cambio del color del texto a un tono más oscuro */
+    background-color: #f0f0f0; /* Fondo gris claro */
+    border: 2px solid #333; /* Borde del botón en tono azul */
+    transition: all 0.3s ease;
+}
+
+/* Efecto al pasar el cursor sobre el elemento */
+.nava:hover {
+    background-color: #bad9ed; /* Cambio a un tono azul al pasar el cursor */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transform: translateY(-2px);
+}
+
+/* Estilos para la barra de navegación */
+nav {
+    text-align: center;
+    padding: 20px 0;
+}
+
+
+
+nav a {
+    text-decoration: none;
+    color: #fff;
+    margin: 20px;
+    margin-bottom: 10px;
+    transition: color 0.3s;
+    box-shadow: 0px 0px 7px  rgba(255, 254, 254, 0.311);
+    border-radius: 8px;
+    padding: 8px 16px;
+}
+
+/* Estilos para el div con la clase "divsPrincipales" */
+.divsPrincipales {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin:auto;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-bottom: 20px; /* Añade un margen inferior para separar los elementos */
+    margin-top: 30px;
+    border-radius: 8px;
+}
+
+/* Estilos para el formulario dentro de "divsPrincipales" */
+#formconsultaVehiclo {
+    text-align: center;
+}
+
+/* Estilos para las etiquetas de los formularios */
+label {
+    display: block;
+    font-weight: bold;
+}
+
+/* Estilos para el campo de entrada de matrícula */
+#matricula {
+        border: 2px solid #333;
+        width: 40%; /* Aumenta el ancho del campo de entrada al 80% del contenedor */
+        height: 70px;
+        font-size: 30px; /* Ajusta el tamaño de la fuente a 16px */
+        text-align: center;
+        max-width: 280px;
+        margin: 20px;
+        border-radius: 8px; /* Bordes más redondeados */
+}
+#matricula:hover {
+    
+    cursor: pointer; 
+}
+
+/* Estilos para el botón de "Comprobar" en el formulario */
+#comprobar {
+    background-color: #00bcd4;
+    color: #fff;
+    padding: 10px 20px;
+    margin: 10px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    height: 90px;
+    max-width: 200px;
+    font-size: 30px; /* Ajusta el tamaño de la fuente a 16px */
+    text-align: center;;
+}
+
+#comprobar:hover {
+    background-color: #007c87;
+}
+
+
+
+#maps {
+    width: 98%;
+    height: 500px;
+}
+
+
+/* TASAS  */
+
+#fechaEntrada, #fechaSalida {
+    background-color: #fff;
+    border: 3px solid black;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    font-size: xx-large;
+    border-radius: 8px;
+    padding: 10px;
+    text-decoration: none ;
+    width: 80%;
+    height: 60px;
+    text-align: center;
+   
+}
+
+#btnCalcular {
+        background-color: #00bcd4;
+        color: white;
+        padding-left: 20px;
+        padding-right: 20px;
+        border: none;
+        cursor: pointer;
+        transition: background-color 0.3s;
+        width: 50%; /* Aumenta el ancho del campo de entrada al 80% del contenedor */
+        font-size: 30px; /* Ajusta el tamaño de la fuente a 16px */
+        text-align: center;
+        max-width: 300px;
+        border-radius: 8px;
+
+
+}
+#btnCalcular:hover {
+    background-color: #007c87;
+}
+
+
+
+
+
+/* Estilos para el pie de página */
+footer {
+    margin-top: 300px;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+   
+
+}
+summary{
+    cursor: pointer;
+    list-style: none;
+    
+}
+#lastFooter{
+    text-align: center;
+
+}
+.suFoot{
+    text-align: left;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+#SiNe{
+    padding-left: 20px;
+    padding-right: 20px;
+}
+/* Estilos para los enlaces */
+a {
+    color: #00bcd4;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+a:hover {
+    color: #007c87;
+}
+                                                /*MEDIA*/
+
+@media  (min-width: 1025px) {
+    .nava {
+        max-width: 20px; /* Tamaño de fuente mayor para dispositivos móviles */
+        font-size: min(28px, calc(3vw + 10px)); /* Límite máximo de 35px */ 
+    }
+    #imgSinIVA{
+       max-width: 700px;
+    }
+    #fechaEntrada, #fechaSalida{
+        background-color: #fff;
+        border: 3px solid black;
+        box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
+        font-size: x-large;
+        border-radius: 8px;
+        padding: auto;
+        text-decoration: none ;
+        max-width: 500px;
+        text-align: center;
+    }
+}

@@ -1,0 +1,126 @@
+/* Estilos para el cuerpo de la página */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilos para el encabezado */
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+}
+
+h1 {
+    font-size: 36px;
+}
+
+/* Estilos para las imágenes a la izquierda y a la derecha del título */
+#tituloheader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+#tituloheader::before, #tituloheader::after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 40px; /* Ajusta el ancho de las imágenes según tu preferencia */
+    height: auto;
+}
+
+#tituloheader::before {
+    content: url('img/izquierda.png'); /* Ruta de la imagen izquierda */
+    left: 0;
+}
+
+#tituloheader::after {
+    content: url('img/derecha.png'); /* Ruta de la imagen derecha */
+    right: 0;
+}
+
+/* Estilos para la barra de navegación */
+nav {
+    background-color: #333;
+    text-align: center;
+    padding: 10px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #fff;
+    margin: 10px;
+    font-size: 18px;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #00bcd4; /* Cambia el color al pasar el mouse por encima */
+}
+/* Estilos para el div con la clase "divsPrincipales" */
+.divsPrincipales {
+    background-color: #fff; /* Fondo blanco */
+    border: 1px solid #ddd; /* Borde delgado gris claro */
+    padding: 20px; /* Relleno interior de 20px */
+    margin: 20px; /* Márgenes exteriores de 20px */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+}
+
+/* Estilos para el formulario dentro de "divsPrincipales" */
+#formconsultaVehiclo {
+    text-align: center;
+}
+
+/* Estilos para las etiquetas de los formularios */
+label {
+    display: block; /* Mostrar etiquetas en una nueva línea */
+    font-weight: bold;
+}
+
+/* Estilos para el campo de entrada de matrícula */
+#matricula {
+    width: 100%; /* Ancho completo del contenedor */
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+}
+
+/* Estilos para el botón de "Comprobar" en el formulario */
+#comprobar {
+    background-color: #00bcd4; /* Fondo azul claro */
+    color: #fff; /* Texto blanco */
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#comprobar:hover {
+    background-color: #007c87; /* Cambia el color al pasar el mouse por encima */
+}
+
+
+/* Estilos para el pie de página */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+}
+
+/* Estilos para los enlaces */
+a {
+    color: #00bcd4;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+a:hover {
+    color: #007c87; /* Cambia el color al pasar el mouse por encima */
+}

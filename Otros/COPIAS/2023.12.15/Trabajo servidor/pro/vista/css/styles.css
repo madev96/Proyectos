@@ -1,0 +1,204 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+    background-color: #1a1a1a; /* Negro intenso */
+    color: #fff; /* Texto blanco */
+
+}
+/* Estilos del encabezado */
+header {
+    color: #fff; /* Color del texto en el encabezado */
+    padding: 20px 0; /* Espaciado interior superior e inferior */
+    text-align: center;
+
+}
+#catalogo{
+    margin: 30px;
+}
+/* Estilos de la barra superior */
+.top-bar {
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px; /* Espaciado interior izquierdo y derecho */
+    align-items: center;
+    margin-bottom: 40px;
+
+}
+
+.logo img {
+    max-width: 150px; /* Ancho máximo del logotipo */
+
+}
+
+/* Estilos de la barra de navegación principal */
+.main-nav ul {
+    list-style: none; /* Eliminar los marcadores de lista */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.main-nav ul li {
+    margin: 0 10px; /* Espaciado entre elementos de la lista */
+}
+
+.main-nav ul li a {
+    color: #fff; /* Color del texto de los enlaces */
+    text-decoration: none; /* Eliminar subrayado de los enlaces */
+    transition: color 0.3s; /* Transición suave de color */
+}
+
+.main-nav ul li a:hover {
+    color: #ffd700; /* Cambio de color al pasar el cursor */
+}
+
+/* Estilos para el botón de cierre de sesión */
+form {
+    display: inline; /* Alinear el botón con los elementos de la lista */
+    margin-left: 10px; /* Espaciado entre el botón y los elementos de la lista */
+}
+
+input[type="submit"] {
+    padding: 8px 16px; /* Espaciado interior del botón */
+    background-color: #ff0000; /* Color de fondo del botón */
+    color: #fff; /* Color del texto del botón */
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s; /* Transición suave del color de fondo */
+}
+
+input[type="submit"]:hover {
+    background-color: #d40000; /* Cambio de color al pasar el cursor */
+}
+.container {
+    margin: 50px auto;
+    text-align: center;
+    background-color: #262626; /* Gris oscuro */
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+}
+
+#imgLogo {
+    
+    margin-bottom: 40px;
+    
+}
+
+.register-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+button {
+    width: auto;
+    margin-bottom: 25px;
+    padding: 15px;
+    border: 1px solid #444; /* Borde gris */
+    border-radius: 8px;
+    font-size: 18px;
+    background-color: #333; /* Gris oscuro */
+    color: #fff; /* Texto blanco */
+    outline: none;
+}
+
+input::placeholder {
+    color: #888; /* Color de texto gris claro para marcadores de posición */
+}
+
+.cantidad-input {
+    width: 20px; /* Ancho específico del elemento */
+    padding: 8px; /* Espaciado interno */
+    font-size: 16px; /* Tamaño de la fuente */
+    border: 1px solid #ccc; /* Borde del elemento */
+    border-radius: 4px; /* Bordes redondeados */
+    box-sizing: border-box; /* Incluir el padding y borde en el ancho total */
+    /* Otros estilos que desees agregar */
+}
+
+button {
+    background-color: #26fc00; /* Verde brillante */
+    border: none;
+    cursor: pointer;
+    color: #333;
+    width: auto 5px;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #20c000; /* Verde más oscuro al pasar el cursor */
+}
+
+.login-link {
+    margin-top: 25px;
+    font-size: 18px;
+    color: #26fc00; /* Verde brillante */
+}
+
+#iniciaSesionAqui{
+    color: #fff;
+}
+
+a {
+    color: #26fc00; /* Verde brillante */
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: #20c000; /* Verde más oscuro al pasar el cursor */
+}
+
+.categories {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 20px;
+   
+  
+
+}
+
+.category-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.category {
+    margin: 10px;
+    padding: 10px 20px;
+    border: 1px solid #444;
+    border-radius: 8px;
+    background-color: #333;
+    color: #fff;
+}
+
+.products {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.product {
+    width: 300px; /* Ancho de cada producto */
+    margin: 20px;
+    padding: 15px;
+    border: 1px solid #444;
+    border-radius: 8px;
+    background-color: #333;
+    color: #fff;
+    transition: transform 0.3s ease-in-out;
+}
+
+.product:hover {
+    transform: scale(1.05);
+}

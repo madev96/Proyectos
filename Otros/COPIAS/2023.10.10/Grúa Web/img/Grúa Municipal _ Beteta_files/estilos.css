@@ -1,0 +1,230 @@
+/* -------------- TODO HEADER ---------------------------------*/
+
+header{
+    left:0;
+    top: 0;
+    position: fixed;
+    width: 100%;
+}
+
+
+.encabezado{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+    background: #222;   
+    height: 58px;
+    text-align: center;
+    
+}
+
+#tituloheader{
+    text-shadow: 0px 0px 4px rgba(0,255,255,0.5);
+    letter-spacing:1.3px;
+    font-family: TimesNew Roman;
+    
+   
+}
+
+nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 58px;
+    background: #222;
+    
+    
+  }
+
+#pr, #se, #pr, #ab, #co {  
+    font-family: calibri;
+    text-decoration: none;
+    height: 40px;
+    align-items: center;
+    padding: 0 10px;
+    display: flex;
+    font-size: 0.9rem;
+    font-weight: 550;
+    margin:40px;
+    color: #fff;
+    border-radius: 5px;
+    box-shadow: inset 0px 2px 4px rgba(0,255,255,0.3), 
+                inset 0px 4px 8px rgba(0,255,255,0.3), 
+                inset 0px 200px 16px rgba(0,255,255,0.3);
+    transition: 0s;
+}
+
+
+#se:hover, #pr:hover, #ab:hover, #co:hover{          /*cuando el cursor pasa por encima*/
+    color: #fff;
+    background-color: #333;
+    box-shadow: inset 0px 2px 4px rgba(0, 0, 0, 0), 
+                inset 0px 4px 8px rgba(0, 0, 0, 0), 
+                inset 0px 200px 16px rgba(0,255,255,0.3);
+    transition: 0s;
+  }
+
+  .encabezado:hover{
+    color: #fff;
+    background-color: #333;
+    box-shadow: inset 0px 2px 4px rgba(0,255,255,0.3), 
+                inset 0px 4px 8px rgba(0,255,255,0.3), 
+                inset 0px 200px 16px rgba(0,255,255,0.3);
+    transition: 0s;
+  }
+  
+
+/* -------------- TODO BODY ---------------------------------*/
+
+body{
+    background:  rgb(168, 168, 168) ; 
+    color:rgb(0, 0, 0);
+    font-family: calibri;
+    margin-top: 130px;
+    }
+
+        /*--------------PÁGINA PRINCIPAL---------------------*/
+    
+
+
+#consulta{
+    float:left;
+    margin: 20px;
+    background-color: grey;
+    display:grid ;
+    justify-content:center;
+    width: 300px;
+    height: 300px;
+    box-shadow: inset 0px 2px 4px rgba(0,255,255,0.3), 
+                inset 0px 4px 8px rgba(0,255,255,0.3), 
+                inset 0px 300px 16px rgba(0,255,255,0.3);
+}
+
+h2{
+  color: black;
+  text-align: center;
+
+}
+#Introduzca{
+  text-align: center;
+}
+
+#matricula{
+    align-items: center;
+    margin-left: 45px;
+    margin-right: 45px;
+    height: 60%; 
+}
+
+#comprobar{
+    padding: 5px;
+    margin: 25px;
+    align-items: center;  
+}
+
+
+/*--------------------CONTACT---------------------*/
+
+#nuestrodepo{
+    width: 50%;
+}
+#dmaps{
+    margin: 1%;
+    position: static;
+    }
+
+
+
+#fcons {
+    top: 10%;
+    position: static;
+    margin: 1%;
+    background-color: rgb(163, 106, 180);
+    }
+  
+
+
+.subtitulo{
+   text-shadow:black
+}
+#idf{ 
+    font-weight: bold;
+    }
+#retirada{
+    align-self: center;
+    width: 280px;
+ 
+}
+#pservices{
+    color: blanchedalmond;
+}
+summary{
+    padding: 2%;
+    font-weight: bold;
+    align-items: center;
+    border-radius: 15px;
+    color:white;
+    text-align: center;
+    width: 50%;
+    
+}
+
+    .summaryser{
+        background-color: #333;
+        margin-bottom: 22px;
+        margin-top: 22px;
+        box-shadow:2px  2px  20px grey;   
+    }
+
+    summary:hover{
+    
+    color: #fff;
+    background-color: #333;
+    box-shadow: inset 0px 2px 4px rgba(0,255,255,0.3), 
+                inset 0px 4px 8px rgba(0,255,255,0.3), 
+                inset 0px 8px 16px rgba(0,255,255,0.3);
+    transition: 0.2s;
+    }
+
+
+aside {
+    font-weight: 400;
+    font-size: 13px;
+    font-weight: bold ;
+    color: rgba(0, 0, 0, 0.648);
+    float: right;
+    text-align:center;
+    margin-top: 2%;
+    padding: 2%;
+    box-sizing: 10%;
+   
+  }
+
+/* -------------- TODO FOOTER ---------------------------------*/
+
+footer{
+   
+    background:rgb(179, 182, 185);
+    color:black;
+    text-align:center;
+
+    position:relative;
+    padding: 1%;
+    
+    
+    }
+
+    #mlm{
+        text-decoration: none;
+        color: blue; 
+    }
+
+
+
+
+
+  
+
+    

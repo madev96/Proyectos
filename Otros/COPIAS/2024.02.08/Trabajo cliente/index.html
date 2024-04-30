@@ -1,0 +1,288 @@
+
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GESTIÓN DE CITAS</title>
+                   
+    <script>   //Presionar "Confirmar"
+    
+        function validaNombre(){                                                  //Validar Nombre. (2-55)         
+            var nom = document.forms["formularioCitaPrevia"]["nombre"].value;
+            if(nom.length < 2 || nom.length > 55){
+                alert("Por favor, introduzca correctamente su nombre");
+                document.getElementById('nombre').value = ''; // Limpiar el campo de apellidos
+            }
+        }
+
+        function validaApellido(){                                              //Validar Apellido. (2-55)         
+            var ape = document.forms["formularioCitaPrevia"]["apellidos"].value;
+            if(ape.length < 2 || ape.length > 55){
+                alert("Por favor, introduzca correctamente su/s apellido/s.");
+                document.getElementById('apellidos').value = ''; // Limpiar el campo de apellidos
+            }
+        }
+  
+        function validaDNI(){                                                 //Validar DNI y NIE.      
+            var regexDNI = /^[XYZ0-9]\d{7}[A-Z]$/;
+            var doc = document.forms["formularioCitaPrevia"]["DNI"].value; 
+            if (!regexDNI.test(doc)) {
+                alert("Por favor, introduzca un DNI o NIE válido.");
+                document.getElementById('DNI').value = ''; // Limpiar el campo de documento
+            }  
+        }
+
+        function validaTelefono(){                                          //Validar Teléfono 
+            var tlf = document.forms["formularioCitaPrevia"]["telefono"].value;
+            if (tlf.length !== 9 || isNaN(tlf)) {
+                alert("Por favor, introduzca un número de móvil válido con exactamente 6 números.");
+                document.getElementById('telefono').value = ''; // Limpiar el campo de teléfono
+            }
+        }
+
+        function validaEmail(){                                           //Validar Email
+            var email = document.forms["formularioCitaPrevia"]["email"].value;
+            var regexCorreo = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+
+            if (!regexCorreo.test(email)) {
+                alert("Por favor, introduzca una dirección de correo electrónico válida.");
+                document.getElementById('email').value = ''; // Limpiar el campo de correo electrónico
+            }
+        }
+
+        function validaFechaNacimiento(){                               //Validar Fecha de nacimiento (mayor de edad)
+            var fechaNacimiento = new Date(document.getElementById('fechaNacimiento').value);
+            var hoy = new Date();
+            var edad = hoy.getFullYear() - fechaNacimiento.getFullYear();
+
+            if (hoy.getMonth() < fechaNacimiento.getMonth() || (hoy.getMonth() === fechaNacimiento.getMonth() && hoy.getDate() < fechaNacimiento.getDate())) {
+                edad--;
+            }
+        
+            if (edad < 18) {
+                alert("Debe ser mayor de edad para solicitar una cita.");
+                document.getElementById('fechaNacimiento').value = ''; // Limpiar el campo de fecha
+            }
+        }
+
+        function validaOficina(){                                     //Validar Oficina
+            var oficinaSeleccionada = document.getElementById('oficina').value;
+
+            if (oficinaSeleccionada === '') {
+                alert("Por favor, seleccione una oficina.");
+                document.getElementById('oficina').value = ''; // Limpiar el campo de oficina
+            }
+        }
+
+        function validaFechaCita(){                                 //Validar Fecha de la cita
+            var fechaCita = new Date(document.getElementById('fechaCita').value);
+            var hoy = new Date();
+
+            if (hoy >= fechaCita ) {
+                alert("No es posible solicitar citas para el día actual o fechas anteriores.");
+                document.getElementById('fechaCita').value = ''; // Limpiar el campo de fecha
+            }
+        }
+
+        function validaHora(){                                    //Validar Hora de la cita
+            var horaSeleccionada = document.getElementById('horaCita').value;
+
+            if (horaSeleccionada === '') {
+                alert("Por favor, seleccione la hora de la cita.");
+                document.getElementById('horaCita').value = ''; // Limpiar el campo de hora
+            }
+        }
+
+        function validarObservaciones(textarea) {               //Validar Observaciones
+            var maxCaracteres = 400;
+
+            if (textarea.value.length > maxCaracteres) {
+                alert("El número máximo de caracteres permitidos es " + maxCaracteres + ".");
+                textarea.value = textarea.value.substring(0, maxCaracteres); // Recorta el texto si es necesario
+            }
+        }
+
+        function guardarCitaLocalStorage() {
+    // Obtener los valores de los campos del formulario
+    var nombre = document.getElementById('nombre').value;
+    var fechaCita = document.getElementById('fechaCita').value;
+    var horaCita = document.getElementById('horaCita').value;
+
+    // Verificar si todos los campos requeridos están completos
+    if (nombre && fechaCita && horaCita) {
+        // Todos los campos están completos, se puede agregar la cita
+        var citasPendientes = JSON.parse(localStorage.getItem('citasPendientes')) || [];
+
+        // Crear un objeto cita con los datos del formulario
+        var cita = {
+            nombre: nombre,
+            fechaCita: fechaCita,
+            horaCita: horaCita
+            // Agregar otras propiedades según sea necesario
+        };
+
+        // Agregar la nueva cita al array
+        citasPendientes.push(cita);
+
+        // Guardar el array actualizado en localStorage
+        localStorage.setItem('citasPendientes', JSON.stringify(citasPendientes));
+
+        // Llamar a la función para mostrar las citas pendientes
+        mostrarCitasPendientes();
+    } else {
+        // Mostrar un mensaje o realizar alguna acción si hay campos incompletos
+        alert("Por favor, complete todos los campos requeridos antes de confirmar la cita.");
+    }
+}
+
+
+        function mostrarCitasPendientes() {                 // Función para obtener y mostrar las citas pendientes desde localStorage
+
+            var citasPendientes = JSON.parse(localStorage.getItem('citasPendientes')) || [];
+            var listaCitasPendientes = document.getElementById('listaCitasPendientes');
+
+            // Limpiar la lista antes de mostrar las citas
+            listaCitasPendientes.innerHTML = '';
+
+            // Mostrar las citas en la lista
+            citasPendientes.forEach(function (cita, index) {
+                var listItem = document.createElement('li');
+                var citaText = 'Cita ' + (index + 1) + ': ';
+
+                // Verificar si cita no es null o undefined antes de acceder a sus propiedades
+                if (cita && typeof cita === 'object') {
+                    // Agregar propiedades específicas si existen
+                    if (cita.nombre) {
+                        citaText += 'Nombre: ' + cita.nombre + ' - ';
+                    }
+
+                    if (cita.fechaCita) {
+                        citaText += 'Fecha: ' + cita.fechaCita + ' ';
+                    }
+
+                    if (cita.horaCita) {
+                        citaText += 'Hora: ' + cita.horaCita;
+                    }
+
+                    listItem.textContent = citaText;
+                    listaCitasPendientes.appendChild(listItem);
+                }
+            });
+        }
+    
+    </script>
+
+</head>
+<body onload="mostrarCitasPendientes()" >
+
+    <header>
+        <h1>DENTISTA ANTONIO ROMERO</h1>
+    </header>
+
+    <form id="formularioCitaPrevia" name="formularioCitaPrevia"  autocomplete="on">
+        <h2>Solicitar una cita</h2>
+
+        <fieldset>
+            <legend>Formulario cita previa</legend>
+            <div>
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" onchange="if (!validaNombre()) this.focus();" autocomplete="given-name"  pattern="^[A-Za-zÁÉÍÓÚáéíóúÜüÑñ -]{2,55}$" title="Ingrese un nombre válido. Debe contener entre 2 y 25 caracteres, solo letras, guiones y espacios. No se permiten espacios al inicio o al final."  required>
+            </div>
+            <div>
+                <label for="apellidos">Apellidos:</label>
+                <input type="text" id="apellidos" name="apellidos" onchange="if (!validaApellido()) this.focus();" autocomplete="family-name"  pattern="^[A-Za-zÁÉÍÓÚáéíóúÜüÑñ -]{2,55}$" title="Ingrese apellidos válidos. Debe contener entre 2 y 55 caracteres, solo letras, guiones y espacios. No se permiten espacios al inicio o al final." required>
+            </div>
+            <div>
+                <label for="DNI">D.N.I:</label>
+                <input type="text" id="DNI" name="DNI" autocomplete="on" onchange="if (!validaDNI()) this.focus();" pattern="^[XYZ0-9][0-9]{7}[A-Z]$" 
+                title="Letras en mayúsculas, sin espacios ni guiones.
+
+            Ejemplo: DNI - 00000000X
+
+            Ejemplo: NIE - X0000000X"
+            
+            required>
+
+            </div>
+            <div>
+                <label for="telefono">Teléfono:</label>
+                <input type="tel" id="telefono" name="telefono" autocomplete="tel" onchange="if (!validaTelefono()) this.focus();" pattern="^\+?[0-9]{9,15}$" title="Ingrese un número de teléfono válido" required>
+            </div>
+            
+            <div>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" autocomplete="email"  onchange="if (!validaEmail()) this.focus();" pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}" title="Ingrese una dirección de correo electrónico válida" required>
+            </div>
+            <div> 
+                <label for="fechaNacimiento">Fecha de Nacimiento:</label>
+                <input type="date" id="fechaNacimiento" name="fechaNacimiento" onchange="validaFechaNacimiento()" required >
+            </div>
+            <div>
+                <label for="oficina">Oficina:</label>
+                <select id="oficina" name="oficina" onchange="validaOficina()" required>
+                    <option value="" disabled selected>- Selecciona una oficina -</option>
+                    <option value="oficina1">C/ Fuente de la Peña Nº 22, Villa de El Álamo</option>
+                    <option value="oficina2">C/ Turina Nº 2, Alcalá de Henares</option>
+                </select>
+            </div>
+            <div>
+                <label for="fechaCita">Día de la cita:</label>
+                <input type="date" id="fechaCita" name="fechaCita" onchange="validaFechaCita()"  required >
+            </div>
+            <div>
+                <label for="horaCita">Hora de la cita:</label>
+                <select id="horaCita" name="horaCita"  onchange="validaHora()" title="Seleccione una hora para la cita." required>
+                  <option value="" disabled selected>- Selecciona una hora -</option>
+                  <option value="09:00">09:00 </option>
+                  <option value="10:00">10:00 </option>
+                  <option value="11:00">11:00 </option>
+                  <option value="12:00">12:00 </option>
+                  <option value="13:00">13:00 </option>
+                  <option value="14:00">14:00 </option>
+                  <option value="17:00">17:00 </option>
+                  <option value="18:00">18:00 </option>
+                  <option value="19:00">19:00 </option>
+                  <option value="20:00">20:00 </option>
+                </select>
+            </div>
+            <div>
+                <label for="observaciones">Observaciones:</label>
+                <br>
+                <textarea id="observaciones" name="observaciones" placeholder="(Opcional, hasta 400 caracteres)" oninput="validarObservaciones(this)" maxlength="400"></textarea>
+            </div>
+            
+
+        </fieldset>
+
+        <div>
+            <button type="button">Volver atrás</button>
+            <button type="reset">Limpiar campos</button>
+            <button type="submit" onclick="guardarCitaLocalStorage()">Confirmar</button>
+        </div>
+    </form>
+
+    <section>
+        <h2>Mis citas pendientes</h2>
+
+        <div>
+            <ul id="listaCitasPendientes"></ul>
+
+            <script>
+                
+
+            </script>
+            
+            
+        </div>
+    </section>
+
+    <!-- El resto de tu cuerpo HTML aquí -->
+
+</body>
+</html>
+<p>JQUERY está funcionando</p>
+<p>Cambiar header por un logo</p>
+<p>Cambiar alert por campos en rojo.</p>
+<p>Falta añadir las observaciones</p>

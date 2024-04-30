@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CIUDADES>
+    <CIUDAD>
+        <CODIGO>Seleccione una ciudad</CODIGO>
+        <NOMBRE>Seleccione una ciudad</NOMBRE>
+        <HABITANTES>Seleccione una ciudad</HABITANTES>
+    </CIUDAD>
+    <CIUDAD>
+        <CODIGO>28001</CODIGO>
+        <NOMBRE>Madrid Centro</NOMBRE>
+        <HABITANTES>794,710</HABITANTES>
+    </CIUDAD>
+    <CIUDAD>
+        <CODIGO>28002</CODIGO>
+        <NOMBRE>Salamanca</NOMBRE>
+        <HABITANTES>148,915</HABITANTES>
+    </CIUDAD>
+    <CIUDAD>
+        <CODIGO>28003</CODIGO>
+        <NOMBRE>Chamberí</NOMBRE>
+        <HABITANTES>137,401</HABITANTES>
+    </CIUDAD>
+    <CIUDAD>
+        <CODIGO>28004</CODIGO>
+        <NOMBRE>Chueca</NOMBRE>
+        <HABITANTES>32,214</HABITANTES>
+    </CIUDAD>
+    <CIUDAD>
+        <CODIGO>28005</CODIGO>
+        <NOMBRE>Latina</NOMBRE>
+        <HABITANTES>241,998</HABITANTES>
+    </CIUDAD>
+    <!-- Agrega más ciudades de Madrid según sea necesario -->
+</CIUDADES>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>AJAX Provincias</title>
+</head>
+<body>
+    <input id="">
+    <h1>Ejemplo AJAX</h1>
+    <h3>Según la selección:</h3>
+    <form id="de">
+        Provincia:
+        <select name="provincia" onchange="mostrarCiudades(this.value)">
+            <option value="">Selecciona una opción</option>
+            <option value="MADRID">Madrid</option>
+            <option value="SEVILLA">Sevilla</option>
+            <option value="BARCELONA">Barcelona</option>
+        </select>
+    </form>
+    <p>
+        Ciudades:
+        <select id="ciudades">
+            <option value="">Selecciona una provincia</option>
+        </select>
+    </p>
+
+    <script type="text/javascript">
+        // Función que se ejecuta al cambiar la provincia seleccionada
+        function mostrarCiudades(provincia) {
+            // Verifica si la provincia es nula o indefinida
+            if(provincia == null || provincia == undefined){
+                // Muestra un mensaje indicando seleccionar una provincia
+                document.getElementById("ciudades").innerHTML = "Selecciona una provincia";
+                return;
+            }
+
+            // Crea un objeto XMLHttpRequest
+            var xhttp = new XMLHttpRequest();
+            
+            // Define la función de manejo de la respuesta
+            xhttp.onreadystatechange = function() {
+                // Verifica si la solicitud se ha completado y la respuesta es OK (status 200)
+                if(xhttp.readyState == XMLHttpRequest.DONE && xhttp.status == 200) {
+                    // Intenta parsear la respuesta como un documento XML
+                    try {
+                        const xmlDoc = xhttp.responseXML;
+
+                        // Verifica si xmlDoc es válido y tiene el método getElementsByTagName
+                        if (xmlDoc && xmlDoc.getElementsByTagName) {
+                            console.log(xmlDoc);
+                            // Llama a la función mostrarListaCiudades con el documento XML
+                            mostrarListaCiudades(xmlDoc);
+                        } else {
+                            console.error('La respuesta no es un documento XML válido');
+                        }
+                    } catch (error) {
+                        console.error('Error al parsear la respuesta como XML', error);
+                    }
+                }
+            }
+
+            // Abre la solicitud GET al archivo XML de ciudades según la provincia seleccionada
+            xhttp.open("GET", provincia + ".xml");
+            
+            // Establece el tipo de respuesta esperada
+            xhttp.responseType = 'document';
+            
+            // Envía la solicitud
+            xhttp.send(null);
+        } 
+
+        // Función que muestra las ciudades en el segundo menú desplegable
+        function mostrarListaCiudades(xmlDoc){
+            // Obtiene la lista de elementos CIUDAD del documento XML
+            const ciudades = xmlDoc.getElementsByTagName("CIUDAD");
+            
+            // Inicializa una cadena para almacenar las opciones del menú desplegable
+            let selectCiudades = "";
+
+            // Itera sobre cada elemento CIUDAD
+            for (let i = 0; i < ciudades.length; i++) {
+                // Construye la opción del menú desplegable con CODIGO y NOMBRE
+                var opcion = "<option value='" + 
+                ciudades[i].getElementsByTagName("CODIGO")[0].childNodes[0].nodeValue + 
+                "'>" +
+                ciudades[i].getElementsByTagName("NOMBRE")[0].childNodes[0].nodeValue + 
+                "</option>";
+                
+                // Agrega la opción a la cadena
+                selectCiudades = selectCiudades + opcion;
+            }
+
+            // Asigna la cadena de opciones al menú desplegable
+            document.getElementById("ciudades").innerHTML = selectCiudades;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,135 @@
+/* Estilos para el cuerpo de la página */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+}
+
+
+
+/* Estilos para el div con la clase "divsPrincipales" */
+.divsPrincipales {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin: 20px auto; /* Centra el div horizontalmente */
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 90%;
+    margin-top: 20px; /* Añade un margen superior para separar los elementos */
+}
+
+/* Estilos para el formulario dentro de "divsPrincipales" */
+#formconsultaVehiclo {
+    text-align: center;
+}
+
+/* Estilos para las etiquetas de los formularios */
+label {
+    display: block;
+    font-weight: bold;
+}
+
+/* Estilos para el campo de entrada de matrícula */
+#matricula {
+        border: 1px solid #ccc;
+        width: 40%; /* Aumenta el ancho del campo de entrada al 80% del contenedor */
+        height: 70px;
+        font-size: 30px; /* Ajusta el tamaño de la fuente a 16px */
+        text-align: center;
+        max-width: 280px;
+
+
+    
+    
+}
+
+/* Estilos para el botón de "Comprobar" en el formulario */
+#comprobar {
+    background-color: #00bcd4;
+    color: #fff;
+    padding: 10px 20px;
+    margin: 10px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: 30%; /* Aumenta el ancho del campo de entrada al 80% del contenedor */
+    height: 90px;
+    max-width: 200px;
+    font-size: 30px; /* Ajusta el tamaño de la fuente a 16px */
+    text-align: center;;
+}
+
+#comprobar:hover {
+    background-color: #007c87;
+}
+
+
+
+
+.divEnColaboracion:hover {
+    color: #007c87;
+}
+
+
+#maps {
+    width: 90%;
+    height: 500px;
+}
+
+
+/* TASAS  */
+
+.calculoFecha {
+    height: 80px; /* Define la altura deseada en píxeles */
+    font-size: 30px; /* Ajusta el tamaño de la fuente a 16px */
+    text-align: center;
+    max-width: 390px;
+
+
+
+}
+
+#btnCalcular {
+        background-color: #00bcd4;
+        color: #fff;
+        padding: 10px 20px;
+        margin: 10px;
+        border: none;
+        cursor: pointer;
+        transition: background-color 0.3s;
+        width: 40%; /* Aumenta el ancho del campo de entrada al 80% del contenedor */
+        height: 110px;
+        font-size: 30px; /* Ajusta el tamaño de la fuente a 16px */
+        text-align: center;
+        max-width: 300px;
+
+}
+#btnCalcular:hover {
+    background-color: #007c87;
+}
+
+
+
+
+
+/* Estilos para el pie de página */
+footer {
+    margin-top: 100px;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+}
+
+/* Estilos para los enlaces */
+a {
+    color: #00bcd4;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+a:hover {
+    color: #007c87;
+}

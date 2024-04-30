@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.web.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="729.0" prefWidth="1232.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controlador.EntradaVehiculosController">
+   <children>
+      <DatePicker fx:id="dtpDiaRetirada" editable="false" layoutX="50.0" layoutY="99.0" />
+      <TextField fx:id="tfHora" layoutX="254.0" layoutY="90.0" prefHeight="25.0" prefWidth="56.0" />
+      <TextField fx:id="tfMin" layoutX="330.0" layoutY="90.0" prefHeight="25.0" prefWidth="56.0" />
+      <TextField fx:id="tfHora2" layoutX="445.0" layoutY="90.0" prefHeight="25.0" prefWidth="56.0" />
+      <TextField fx:id="tfHora11" layoutX="521.0" layoutY="90.0" prefHeight="25.0" prefWidth="56.0" />
+      <DatePicker fx:id="dtpDiaEntrada" editable="false" layoutX="659.0" layoutY="99.0" />
+      <TextField fx:id="tfHora3" layoutX="857.0" layoutY="90.0" prefHeight="25.0" prefWidth="56.0" />
+      <TextField fx:id="tfHora12" layoutX="933.0" layoutY="90.0" prefHeight="25.0" prefWidth="56.0" />
+      <Label layoutX="659.0" layoutY="63.0" prefHeight="27.0" prefWidth="174.0" text="Día de retirada:">
+         <font>
+            <Font size="18.0" />
+         </font></Label>
+      <Label layoutX="446.0" layoutY="64.0" text="Hora de denuncia:">
+         <font>
+            <Font size="18.0" />
+         </font></Label>
+      <Label layoutX="136.0" layoutY="194.0" text="MARCA:">
+         <font>
+            <Font size="18.0" />
+         </font></Label>
+      <Label layoutX="523.0" layoutY="156.0" text="Nº DE POLICÍA:">
+         <font>
+            <Font size="18.0" />
+         </font></Label>
+      <Label layoutX="132.0" layoutY="228.0" text="MODELO:">
+         <font>
+            <Font size="18.0" />
+         </font></Label>
+      <Label layoutX="138.0" layoutY="262.0" text="COLOR:">
+         <font>
+            <Font size="18.0" />
+         </font></Label>
+      <Label layoutX="124.0" layoutY="159.0" text="MATRÍCULA:">
+         <font>
+            <Font size="18.0" />
+         </font></Label>
+      <Label layoutX="554.0" layoutY="191.0" text="SERVICIO:">
+         <font>
+            <Font size="18.0" />
+         </font></Label>
+      <Label layoutX="16.0" layoutY="444.0" text="COMENTARIOS:">
+         <font>
+            <Font size="18.0" />
+         </font></Label>
+      <Label layoutX="80.0" layoutY="335.0" text="TIPO DE VEHÍCULO:">
+         <font>
+            <Font size="18.0" />
+         </font></Label>
+      <Label layoutX="556.0" layoutY="233.0" text="MOTIVO:">
+         <font>
+            <Font size="18.0" />
+         </font></Label>
+      <Label layoutX="254.0" layoutY="64.0" prefHeight="27.0" prefWidth="164.0" text="Hora de entrada:">
+         <font>
+            <Font size="18.0" />
+         </font></Label>
+      <Label layoutX="563.0" layoutY="308.0" text="GRÚA:">
+         <font>
+            <Font size="18.0" />
+         </font></Label>
+      <Label layoutX="526.0" layoutY="272.0" text="CONDUCTOR:">
+         <font>
+            <Font size="18.0" />
+         </font></Label>
+      <Label layoutX="861.0" layoutY="64.0" prefHeight="27.0" prefWidth="149.0" text="Hora de retirada:">
+         <font>
+            <Font size="18.0" />
+         </font></Label>
+      <Label layoutX="561.0" layoutY="344.0" text="PLAZA:">
+         <font>
+            <Font size="18.0" />
+         </font></Label>
+      <Label layoutX="135.0" layoutY="300.0" text="ESTADO:">
+         <font>
+            <Font size="18.0" />
+         </font></Label>
+      <TextField fx:id="tfMatricula" layoutX="245.0" layoutY="159.0" />
+      <ComboBox fx:id="cbMarca" editable="true" layoutX="245.0" layoutY="194.0" prefWidth="150.0" />
+      <ComboBox fx:id="cbModelo" editable="true" layoutX="245.0" layoutY="228.0" prefWidth="150.0" />
+      <ComboBox fx:id="cbColor" layoutX="245.0" layoutY="261.0" prefWidth="150.0" />
+      <ComboBox fx:id="cbEstado" layoutX="245.0" layoutY="300.0" prefWidth="150.0" />
+      <ComboBox fx:id="cbTipoDeVehiculo" layoutX="245.0" layoutY="336.0" prefWidth="150.0" />
+      <ComboBox fx:id="cbPolicia" editable="true" layoutX="671.0" layoutY="156.0" prefWidth="150.0" />
+      <ComboBox fx:id="cbServicio" layoutX="671.0" layoutY="194.0" prefWidth="150.0" />
+      <ComboBox fx:id="cbMotivo" layoutX="672.0" layoutY="228.0" prefWidth="150.0" />
+      <ComboBox fx:id="cbConductor" layoutX="671.0" layoutY="274.0" prefWidth="150.0" />
+      <ComboBox fx:id="cbGrua" layoutX="672.0" layoutY="313.0" prefWidth="150.0" />
+      <ComboBox layoutX="671.0" layoutY="349.0" prefWidth="150.0" />
+      <Button fx:id="btnGrabar" layoutX="649.0" layoutY="531.0" mnemonicParsing="false" onAction="#guardarDatos" prefHeight="87.0" prefWidth="174.0" text="DAR ENTRADA">
+         <font>
+            <Font size="18.0" />
+         </font></Button>
+      <Label layoutX="409.0" layoutY="29.0" prefHeight="27.0" prefWidth="258.0" text="NÚMERO DE REGISTRO:">
+         <font>
+            <Font size="24.0" />
+         </font></Label>
+     <Button fx:id="btnVolver" focusTraversable="false" layoutX="54.0" layoutY="562.0" mnemonicParsing="false" onAction="#closeWindows" prefHeight="56.0" prefWidth="149.0" text="VOLVER" />
+      <TextArea fx:id="taComentarios" layoutX="154.0" layoutY="395.0" prefHeight="125.0" prefWidth="870.0" promptText="Escribie aqui...">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </TextArea>
+      <Label fx:id="lNumReg" layoutX="678.0" layoutY="29.0" prefHeight="35.0" prefWidth="94.0" text="Label" />
+      <Label layoutX="887.0" layoutY="164.0" text="DIRECCIÓN:">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="tfPreDireccion" layoutX="994.0" layoutY="158.0" prefHeight="27.0" prefWidth="128.0" />
+      <TextField fx:id="tfDireccion" layoutX="890.0" layoutY="201.0" prefHeight="56.0" prefWidth="329.0" />
+      <Label layoutX="54.0" layoutY="64.0" prefHeight="27.0" prefWidth="150.0" text="Día de entrada:">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Button layoutX="409.0" layoutY="195.0" mnemonicParsing="false" text="+" />
+      <Button layoutX="409.0" layoutY="231.0" mnemonicParsing="false" text="+" />
+      <Button layoutX="833.0" layoutY="156.0" mnemonicParsing="false" text="+" />
+      <Label layoutX="323.0" layoutY="94.0" prefHeight="17.0" prefWidth="14.0" text=":" />
+      <Label layoutX="389.0" layoutY="94.0" text="min" />
+      <Label layoutX="312.0" layoutY="94.0" text="h" />
+      <Label layoutX="503.0" layoutY="94.0" text="h" />
+      <Label layoutX="580.0" layoutY="94.0" text="min" />
+      <Label layoutX="514.0" layoutY="94.0" prefHeight="17.0" prefWidth="14.0" text=":" />
+      <Label layoutX="915.0" layoutY="94.0" text="h" />
+      <Label layoutX="992.0" layoutY="94.0" text="min" />
+      <Label layoutX="926.0" layoutY="94.0" prefHeight="17.0" prefWidth="14.0" text=":" />
+   </children>
+</AnchorPane>

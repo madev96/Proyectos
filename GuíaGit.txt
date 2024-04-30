@@ -1,0 +1,7 @@
+
+GIT
+1. git status
+2. git add nombre_archivo.py o git add . (todo)
+3. git commit -m "Nombre de la versión".
+4. git push PARA ENVIAR A REMOTO(hub)
+4. apuntes de git push ( Si estás en la rama principal (main) y tu repositorio remoto se llama origin, simplemente ejecutar git push debería ser suficiente para enviar tus cambios locales a la rama principal del repositorio remoto. Si estás en una rama diferente y quieres enviar los cambios de esa rama en particular, puedes hacerlo usando git push origin nombre_de_tu_rama. Por ejemplo, si estás en una rama llamada mi_rama, ejecutarías: git push origin mi_rama

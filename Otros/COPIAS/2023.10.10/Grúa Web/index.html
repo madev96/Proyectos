@@ -1,0 +1,116 @@
+<!--el ámbito de esta empresa puede cambiarse pero no sus apartados:
+-Página principal   (un poco de info de la empresa, junto con alguna imagen y habrá que enlazar el apartado ¿Quiénes somos? en alguna parte del texto)
+-¿Quiénes somos?    (Se amplia la información de la empresa y se apoyará dicha info mediante imágenes, vídeos y otras webs de interés)
+-Productos          (Se listarán las aplicaciones ya desarrolladas por la empresa.  Para ello se utilizará una tabla utilizando el estulo que prefieras)
+-Servicios          ( Será una pestaña libre, puedes plantearla a tu gusto y obligatorio añadir todas las herramientas que quieras. Habrá que añadir varios elementos distintos)
+-Contaco            ( Incluir un apartado "¿Dónde estamos? con la información de la empresa, contará también con un apartado "Solicitud de información", el cual será un formulario donde el usuario informe (nombre, mail, tlf y caja donde pueda explicar lo que quiere.    Habrá un enlace al formulario "Trabaja con nosostro". ("nombre, apellids, dni, sexo, fecha naci, ciudad, naciona, CP, tlf, mail. AQUÍ HAY MÁS COSITAS)) )
+-En la clase del tema 8)-->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>Grúa Municipal | Beteta</title>
+    <meta charset="utf-8">
+    <meta name="descripcion"content="esto es un doc HTML5">
+    <meta name="ketwords" content="HTML, CSS, JavaScript">
+    <link href="css/estilos.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <header>                                                                        <!--Cabecera-->
+        <nav class="n1">
+            <a href="http://aytobeteta.es/" target="_blank">
+              <img src="img/escudo.png" alt="Imagen izquierda" class="imagen-izquierda">
+            </a>
+            <a href="index.html"  class="encabezado">                                              
+            <h1 id="tituloheader">GRÚA MUNICIPAL DE BETETA</h1></a>
+
+            <a href="https://www.policia.es/_es/index.php" target="_blank"><img src="img/pmm.png" alt="Imagen derecha" class="imagen-derecha"></a>
+        </nav>    
+        
+        <nav class="n2">                                                    <!--Barra de navegación SUPERIOR-->
+            <a href="recuperarVehiculo.html" id="mv">MI VEHÍCULO</a>  
+            <a href="deposito.html" id="d">DEPÓSITO</a>   
+            <a href="tasas.html" id="ta">TASAS</a>   
+            <a href="tramites.html" id="tr">TRÁMITES</a>
+        </nav>
+    </header>
+   
+    
+    <!--<aside>
+        <a href="https://www.boe.es/buscar/act.php?id=BOE-A-2015-11722" target ="_blank">  <img src="img/ley.webp" alt="Link a ley " width="150" height="150"> </a>   
+        <figcaption id="pie_de_pagina_ley">
+        Ley sobre Tráfico.
+        </figcaption><br><br>
+        <a href="http://aytobeteta.es/" target ="_blank">  <img src="img/beteta_escudo.png" alt="Link a ayto. municipio" width="95" height="140"> </a>   
+        <figcaption id="pie_de_pagina_ayto">
+        Ayuntamiento de Beteta.
+        </figcaption><br><br>
+        <a href="https://solandecabras.es/" target ="_blank">  <img src="img/solan.webp" alt="Link a web patrocinador" width="140" height="140"> </a>   
+        <figcaption id="pie_de_pagina_ayto">
+        Patrocinador local. 
+        </figcaption><br><br>
+    </aside>-->
+
+    
+    <main><br>
+        <h1>Página principal</h1><wbr>
+        <details>
+            <summary id="consulta">                        <!--CONSULTA VEHÍCULO-->
+                <h2>¿Han retirado mi vehículo?</h2>  </summary>
+                <form id="consulta12">     
+                    <label id="Introduzca">Introduzca su matrícula.</label>
+                            <input id="matricula" placeholder=" Ejemplo: 0000XXX " type ="text"> 
+                            <input   id="comprobar" type ="submit"  value="Comprobar" size="50%"> 
+                        <p>Esta web ofrece a los ciudadanos una manera conveniente de verificar si su vehículo ha sido retirado por la grúa. Donde se puede encontrar un formulario para ingresar los datos del vehículo. Una vez que se envía la información, el sistema verificará si el vehículo ha sido retirado por la grúa y mostrará los detalles pertinentes al respecto.</p>
+                <p>Si deseas asegurarte si tu vehículo ha sido retirado y se encuentra en el depósito o se ha trasladado, puedes:</p>
+            <ul>
+              <li>Llamar al número de teléfono que aparece <a href="http://127.0.0.1:5555/deposito.html">aquí</a></li>
+              <li>Enviar un correo electrónico a la dirección de correo electrónico proporcionada en la misma página.</li>
+              <li>Acudir en persona al depósito de Beteta para recibir toda la información acerca de su vehículo.</li>
+            </ul>
+            <p>Es importante tener en cuenta que, si tu vehículo ha sido retirado por la autoridad competente, deberás pagar los gastos de la retirada y el depósito antes de poder recuperarlo.</p>
+                </form>
+        </details>
+        
+        
+
+    
+
+
+      
+
+        <form id="consulta12">                        <!--LUN VEHÍCULO ME BLOQUEA EL PASO-->
+            <h2>Un vehículo me bloquea el paso</h2>
+            <p>Si es necesario que la grúa retire un vehículo que está obstruyendo el paso de otros vehículos, es importante informar primero a la policía local para que ellos se encarguen de la situación y notifiquen a la grúa municipal. Una vez que se ha hecho la notificación, la grúa acudirá al lugar para retirar el vehículo y liberar el paso de los demás vehículos. </p>         
+        </form>
+        <form id="consulta12">      
+        <h2>NUESTROS SERVICIOS Y FUNCIONES</h2>
+        <p>La Grúa Municipal de Beteta es un servicio público que tiene como objetivo garantizar la seguridad vial y el cumplimiento de las normativas de tráfico en nuestro pueblo.</p>
+        <p>Nuestro equipo de profesionales altamente capacitados se encarga de retirar los vehículos mal estacionados, abandonados o que obstaculizan el tráfico en las calles de Betetea. De esta manera, se busca mejorar la fluidez del tráfico y garantizar la seguridad de peatones y conductores.</p>
+        <p>Además, el servicio de la Grúa Municipal también se encarga de depositar los vehículos en nuestro depósito municipal, donde se garantiza la seguridad y custodia de los mismos.</p>
+        <p>Nos esforzamos por brindar un servicio eficiente y de calidad a todos los ciudadanos, y estamos a su disposición las 24 horas del día, los 7 días de la semana. Si necesita de nuestros servicios, no dude en contactar con la Policía Local  a través del número de teléfono [ 092  ].</p>
+        <p>Agradecemos su colaboración y compromiso en el cumplimiento de las normativas de tráfico y seguridad vial en nuestra ciudad.</p>
+        <br>
+                                                             <!--ASIDE-->
+        <aside class="barralateral">
+            <a href="index.html"  onmouseout="this.style.transform='scale(1)'" class="barralateral"> <img src="img/flecha.png" width="30" height="30"></a><br><br>
+            <a href="https://www.google.com/maps/place/Hotel+los+Tilos/@40.57411,-2.0772,15z/data=!4m9!3m8!1s0xd42fbdfbbe9e4e1:0xfe7ea2e2017bae1a!5m2!4m1!1i2!8m2!3d40.57411!4d-2.0772!16s%2Fg%2F11t75xfzr3?hl=es" class="barralateral" target="_blank"> <img src="img/logoubica.png" width="30" height="30"></a><br><br>
+            <a href="tel:+34918786844" class="barralateral"> <img src="img/tlf.png" width="30" height="30"></a><br><br>
+            <a href="http://aytobeteta.es/" class="barralateral" target="_blank"> <img src="img/logoayto.png" width="30" height="30"></a><br><br>
+            <a href="http://aytobeteta.es/" class="barralateral" target="_blank"> <img src="img/logoayto.png" width="30" height="30"></a>
+        </aside>
+    </form>
+    <wbr>
+
+        
+    </main><wbr>
+    
+    
+    
+</body>
+
+
+<footer>                                                   
+    <small>&copy; 2023 Todos los derechos reservados.  <a id="mlm" href="https://www.linkedin.com/in/manuel-lozano-mart%C3%ADnez-ab7160204/"> <b>M.L</b></a></small>      
+</footer>
+
+</html>

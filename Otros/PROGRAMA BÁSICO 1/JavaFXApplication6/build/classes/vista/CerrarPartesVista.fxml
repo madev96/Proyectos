@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="667.0" prefWidth="1183.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controlador.CerrarPartesController">
+   <children>
+      <TableView fx:id="tabla" layoutY="115.0" prefHeight="461.0" prefWidth="1163.0" AnchorPane.bottomAnchor="91.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="115.0">
+        <columns>
+          <TableColumn fx:id="colConductor" prefWidth="254.0" text="Conductor" />
+          <TableColumn fx:id="colGrua" prefWidth="203.0" text="Grúa" />
+            <TableColumn fx:id="colTurno" prefWidth="206.0" text="Turno" />
+            <TableColumn fx:id="colFechaYHoraApertura" prefWidth="192.0" text="Fecha de apertura" />
+            <TableColumn fx:id="colCodigo" prefWidth="114.0" text="Código" />
+            <TableColumn fx:id="colFechaYHoraCierre" prefWidth="25.0" />
+        </columns>
+      </TableView>
+      <Label alignment="CENTER" prefHeight="89.0" prefWidth="1156.0" text="Partes abiertos" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0">
+         <font>
+            <Font size="48.0" />
+         </font>
+         <effect>
+            <InnerShadow />
+         </effect>
+      </Label>
+      <Separator layoutX="10.0" layoutY="68.0" prefHeight="42.0" prefWidth="838.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" />
+      <Button fx:id="btnVolver" layoutX="14.0" layoutY="559.0" mnemonicParsing="false" onAction="#closeWindows" prefHeight="51.0" prefWidth="143.0" text="Atrás" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="10.0">
+         <font>
+            <Font size="30.0" />
+         </font></Button>
+      <Button fx:id="btnCerPar" layoutX="596.0" layoutY="564.0" mnemonicParsing="false" onAction="#cerrarParte" prefHeight="51.0" prefWidth="406.0" text="Cerrar parte seleccionado" AnchorPane.bottomAnchor="14.0" AnchorPane.rightAnchor="10.0">
+         <font>
+            <Font size="30.0" />
+         </font>
+      </Button>
+      <Button layoutX="188.0" layoutY="559.0" mnemonicParsing="false" prefHeight="65.0" prefWidth="567.0" text="Ver parte seleccionado" AnchorPane.bottomAnchor="14.0">
+         <font>
+            <Font size="30.0" />
+         </font>
+         <effect>
+            <DropShadow />
+         </effect>
+      </Button>
+   </children>
+</AnchorPane>

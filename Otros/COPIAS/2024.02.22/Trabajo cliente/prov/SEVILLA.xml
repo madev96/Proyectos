@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CIUDADES>
+    <CIUDAD>
+        <CODIGO>Seleccione una ciudad</CODIGO>
+        <NOMBRE>Seleccione una ciudad</NOMBRE>
+        <HABITANTES>Seleccione una ciudad</HABITANTES>
+    </CIUDAD>
+    <CIUDAD>
+        <CODIGO>41001</CODIGO>
+        <NOMBRE>Sevilla</NOMBRE>
+        <HABITANTES>688711</HABITANTES>
+    </CIUDAD>
+    <CIUDAD>
+        <CODIGO>41002</CODIGO>
+        <NOMBRE>Triana</NOMBRE>
+        <HABITANTES>25823</HABITANTES>
+    </CIUDAD>
+    <CIUDAD>
+        <CODIGO>41003</CODIGO>
+        <NOMBRE>Los Remedios</NOMBRE>
+        <HABITANTES>40236</HABITANTES>
+    </CIUDAD>
+    <CIUDAD>
+        <CODIGO>41004</CODIGO>
+        <NOMBRE>Macarena</NOMBRE>
+        <HABITANTES>30547</HABITANTES>
+    </CIUDAD>
+    <CIUDAD>
+        <CODIGO>41005</CODIGO>
+        <NOMBRE>Nervión</NOMBRE>
+        <HABITANTES>40982</HABITANTES>
+    </CIUDAD>
+    <!-- Agrega más ciudades según sea necesario -->
+</CIUDADES>

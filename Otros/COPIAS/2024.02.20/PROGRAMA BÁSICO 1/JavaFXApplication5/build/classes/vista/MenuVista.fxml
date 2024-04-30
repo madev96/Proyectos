@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="531.0" prefWidth="1455.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controlador.MenuController">
+   <children>
+      <VBox layoutX="561.0" layoutY="68.0" prefHeight="102.0" prefWidth="334.0">
+         <children>
+            <Button fx:id="btnACaja" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#abrirCaja" prefHeight="51.0" prefWidth="353.0" text="Comenzar turno" textFill="#1ab930">
+               <font>
+                  <Font size="24.0" />
+               </font>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </Button>
+            <Button fx:id="btnCCaja" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#cerrarCaja" prefHeight="77.0" prefWidth="334.0" text="Finalizar turno" textFill="#ee0404">
+               <font>
+                  <Font size="24.0" />
+               </font>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </Button>
+         </children>
+      </VBox>
+      <VBox layoutX="68.0" layoutY="68.0" prefHeight="102.0" prefWidth="334.0">
+         <children>
+            <Button fx:id="btnIntroducir" contentDisplay="CENTER" mnemonicParsing="false" onAction="#insertarServicios" prefHeight="51.0" prefWidth="355.0" text="Entrada de vehículo">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnSalida" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#salidaDeServicios" prefHeight="51.0" prefWidth="355.0" text="Salida de vehículo">
+               <font>
+                  <Font size="24.0" />
+               </font>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </Button>
+         </children>
+      </VBox>
+      <VBox layoutX="547.0" layoutY="253.0" prefHeight="102.0" prefWidth="348.0">
+         <children>
+            <Button fx:id="cerrarPartes" alignment="CENTER" mnemonicParsing="false" onAction="#cerrarParte" prefHeight="51.0" prefWidth="355.0" text="Cerrar partes">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnConsultarPartes" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#consultarParte" prefHeight="51.0" prefWidth="355.0" text="Ver partes abiertos">
+               <font>
+                  <Font size="24.0" />
+               </font>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </Button>
+         </children>
+      </VBox>
+      <VBox layoutX="68.0" layoutY="253.0" prefHeight="153.0" prefWidth="334.0">
+         <children>
+            <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="51.0" prefWidth="355.0" text="Consultar vehículos">
+               <font>
+                  <Font size="24.0" />
+               </font>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </Button>
+            <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="51.0" prefWidth="355.0" text="Histórico de vehículos">
+               <font>
+                  <Font size="24.0" />
+               </font>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </Button>
+            <Button fx:id="btnConsultar" contentDisplay="CENTER" mnemonicParsing="false" onAction="#consultarServicios" prefHeight="51.0" prefWidth="355.0" text="Ver lista de todos">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Button>
+         </children>
+      </VBox>
+      <HBox layoutX="211.0" layoutY="463.0" prefHeight="100.0" prefWidth="512.0" />
+      <VBox layoutX="995.0" layoutY="68.0" prefHeight="210.0" prefWidth="348.0">
+         <children>
+            <Button fx:id="btnConsultarCajas" mnemonicParsing="false" onAction="#ConsultarCajas" prefHeight="51.0" prefWidth="362.0" text="Consultar cajas" textFill="#0400f8">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnTodosPartes" mnemonicParsing="false" onAction="#verTodos" prefHeight="58.0" prefWidth="371.0" text="Ver todos los partes" textFill="#1100ff">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Button>
+            <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="51.0" prefWidth="355.0" text="Retirada de objetos">
+               <font>
+                  <Font size="24.0" />
+               </font>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </Button>
+            <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="54.0" prefWidth="378.0" text="Consultar facturas">
+               <font>
+                  <Font size="24.0" />
+               </font>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </Button>
+         </children>
+      </VBox>
+      <Separator layoutX="946.0" layoutY="30.0" orientation="VERTICAL" prefHeight="483.0" prefWidth="0.0" />
+   </children>
+</AnchorPane>

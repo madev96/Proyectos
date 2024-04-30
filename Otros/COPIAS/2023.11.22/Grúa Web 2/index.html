@@ -1,0 +1,85 @@
+<!--http://localhost/Proyectos/Gr%C3%BAa%20Web%202/index.html-->
+
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>Grúa Municipal - Alcalá</title>
+    <meta charset="UTF-8">
+    <meta name="description"content="Web de la grúa municipal de Alcalá de Henares"> <!--Esto tengo que mirarlo bien-->
+    <meta name="ketwords" content="HTML, CSS, JavaScript">
+    <!--Vincular el HTML CON EL ARCHIVO EXTERNO CON EL ARCHIVO ESTILOS CSS-->
+    <link href="css/estilos.css" rel="stylesheet" type="text/css">
+    <!--Vincular el HTML CON EL ARCHIVO EXTERNO CON LA FUNCIONALIDAD JAVASCRIPT-->
+    <script src="js/funcionalidad.js"></script>
+    
+
+</head>
+<body>
+
+    <header>
+        <div class="" id="divPoli">
+            <a href="https://seguridadciudadana.ayto-alcaladehenares.es/policia-local/" target="_blank"><strong>Policía Local</strong></a> 
+         </div>
+         <div class="" id="divAyto">
+            <a href="https://www.ayto-alcaladehenares.es/" target="_blank"><strong> Ayuntamiento </strong></a> 
+         </div>
+        <a href="index.html"  class="encabezado">                                              
+         <img class="grua" src="img/G2.png" alt="Link a la página de inicio Grúa Municipal de Alcalá de Henares"  width="80%" height="50%">
+        </a>
+      
+        <nav>   
+            <a class="nava" href="tasas.html" >Tasas</a> 
+            <a class="nava" href="documentacion_necesaria.html" >Documentación</a> 
+            <a class="nava" href="preguntas_frecuentes.html" >Preguntas</a>
+        </nav>
+    </header>
+ 
+    <main>
+ 
+    
+              <!--atención al ciudadano-->   
+        <div class="divsPrincipales" id="">                                 
+            <h2><p>Atención
+                <a href="tel:+34918786844" >  telefónica</a>
+                y  
+                <a href="index.html#maps">presencial</a></p>
+                <p>24 horas todos los días del año.</p>
+            </h2>  
+        </div>
+        <!--ha retirado la grúa mi vehículo-->   
+        <div class="divsPrincipales" id="">                                          
+            <h2>¿Ha retirado la grúa mi vehículo?</h2>  
+            <form id="formconsultaVehiclo" name="formulario" method="get" action="matriculas.php"> 
+                <br>    
+                <h3>
+                <label id="labMatricula">&#x2193; Introduzca la matrícula &#x2193;</label>
+                <input id="matricula" placeholder="" name="matricula" value="" type ="text"> <br><br>
+                <input  id="comprobar" type ="submit"  value="Comprobar" size="50%"> 
+            </h3>
+            </form>
+        </div>
+        <div class="divsPrincipales" id="">                        <!--¿DÓNDE ESTÁ EL DEPÓSITO?-->
+            <h2>¿Dónde está el depósito?</h2>  
+            <iframe id="maps" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3034.6118574306943!2d-3.386221424260664!3d40.48385115155189!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd42499f577e3769%3A0x7a62c38e5efb88ce!2sGr%C3%BAa%20Municipal%20de%20Alcal%C3%A1%20de%20Henares!5e0!3m2!1ses!2ses!4v1698426737985!5m2!1ses!2ses"  style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <p id="dir"> <b>Dirección:</b> C/ Camino del Cementerio, S/N. 28806 Alcalá de Henares, Madrid</p>
+        </div>
+    </main>
+</body>
+
+
+<footer>            
+    <small>La Grúa Municipal de Alcalá de Henares es un servicio público que tiene como objetivo garantizar la seguridad vial y el cumplimiento de las normativas de tráfico en nuestra ciudad.
+    <br>
+    El servicio de la Grúa Municipal también se encarga de retirar los vehículos mal estacionados, abandonados o que obstaculizan el tráfico en las calles de Alcalá y de depositar los vehículos en nuestro depósito municipal, donde se garantiza la seguridad y custodia de los mismos.
+    <br>
+    De esta manera, se busca mejorar la fluidez del tráfico y garantizar la seguridad de peatones y conductores.
+    <br><br>
+    Nuestro equipo de profesionales altamente capacitados se esfuerza por brindar un servicio eficiente y de calidad a todos los ciudadanos, y estamos a su disposición las 24 horas del día, los 7 días de la semana. Si necesita de nuestros servicios, no dude en contactar con la Policía Local  a través del número de teléfono [ 092 ].
+    <br><br>
+    Agradecemos su colaboración y compromiso en el cumplimiento de las normativas de tráfico y seguridad vial en nuestra ciudad.</small>
+    <br><br>                             
+    <small>&copy; 2023 Todos los derechos reservados.  <a id="mlm" href="https://www.linkedin.com/in/manuel-lozano-mart%C3%ADnez-ab7160204/"> <b>M.L</b></a></small>      
+</footer>
+
+</html>

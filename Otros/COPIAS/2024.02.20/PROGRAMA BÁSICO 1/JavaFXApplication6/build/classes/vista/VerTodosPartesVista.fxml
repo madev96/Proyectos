@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="551.0" prefWidth="989.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controlador.VerTodosPartesController">
+   <children>
+      <TableView fx:id="tabla" layoutX="57.0" layoutY="136.0" prefHeight="280.0" prefWidth="913.0">
+        <columns>
+          <TableColumn fx:id="colConductor" prefWidth="111.0" text="Conductor" />
+          <TableColumn fx:id="colGrua" prefWidth="76.0" text="Grúa" />
+            <TableColumn fx:id="colTurno" prefWidth="169.0" text="Turno" />
+            <TableColumn fx:id="colFechaYHoraApertura" prefWidth="232.0" text="Fecha de apertura" />
+            <TableColumn fx:id="colFechaYHoraCierre" prefWidth="209.0" text="Fecha de cierre" />
+            <TableColumn fx:id="colCodigo" prefWidth="105.0" text="Código" />
+        </columns>
+      </TableView>
+      <Button fx:id="btnVolver" layoutX="57.0" layoutY="440.0" mnemonicParsing="false" onAction="#closeWindows" prefHeight="51.0" prefWidth="209.0" text="Volver">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Button>
+      <Label alignment="CENTER" layoutX="70.0" layoutY="24.0" prefHeight="59.0" prefWidth="736.0" text="Ver todos los partes">
+         <font>
+            <Font name="Wingdings" size="48.0" />
+         </font>
+      </Label>
+      <Button fx:id="btnCerrar" layoutX="512.0" layoutY="440.0" mnemonicParsing="false" onAction="#cerrarParte" prefHeight="51.0" prefWidth="209.0" text="Cerrar parte">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Button>
+      <Button layoutX="285.0" layoutY="440.0" mnemonicParsing="false" prefHeight="51.0" prefWidth="209.0" text="Ver parte">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

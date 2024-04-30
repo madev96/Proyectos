@@ -1,0 +1,341 @@
+/* -------------- TODO BODY ---------------------------------*/
+
+body{
+    background-color: #333;
+    color:white;
+    font-family: calibri;
+    margin-top: 110px;
+    justify-content: center;
+    align-items: center; 
+   
+
+  }
+
+/* -------------- TODO HEADER ---------------------------------*/
+header{
+    
+    top: 0;
+    position: fixed;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.encabezado{
+    display: flex;
+    text-decoration: none;
+    color: black;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    flex-wrap: wrap;
+    border-radius: 5px;
+    background: linear-gradient(to top , #0ed10e70, rgba(75, 255, 59, 0.651));
+    position: static;
+    
+}
+.imagen-izquierda, .imagen-derecha  {
+    display: flex;
+
+    align-items: center;
+    width: 2.0rem;
+    max-width: 100%;
+    padding-left: 40px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-right: 40px;
+    margin: 60px;
+    border-radius: 5px;
+  background: linear-gradient(to top, #677294, rgba(98, 255, 59, 0.404));
+        margin-bottom: 22px;
+        margin-top: 22px;
+       
+}
+
+
+
+
+
+#tituloheader{
+    letter-spacing:1.3px;
+    font-family: TimesNew Roman;
+    margin: 10px;
+   
+   
+    color: black;
+    font-size: 30px;
+    
+}
+
+nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 58px;
+  background: #333;
+
+}
+    
+
+
+#mv,
+#d,
+#ta,
+#tr {
+font-family: Calibri;
+text-decoration: none;
+height: 40px;
+justify-content: center;
+align-items: center;
+padding: 0 10px;
+width: 105px;
+display: flex;
+color: black;
+background: linear-gradient(to bottom, #677294, rgba(98, 255, 59, 0.404));
+font-weight: 550;
+margin: 40px;
+border-radius: 5px;
+}
+
+#mv:hover,
+#d:hover,
+#ta:hover,
+#tr:hover {
+background: linear-gradient(to bottom, rgba(98, 255, 59, 0.404), #677294);
+box-shadow: 0px 0px 2px rgba(3, 3, 3, 0.884);
+color: white;
+}
+  
+.imagen-derecha:hover,
+.imagen-izquierda:hover,
+.encabezado:hover {
+background: linear-gradient(to bottom, #0ed10e70, rgba(75, 255, 59, 0.651));
+box-shadow: 0px 0px 2px rgba(3, 3, 3, 0.884);
+}
+ 
+
+
+
+        /*--------------PÁGINA PRINCIPAL---------------------*/
+    
+       
+        
+       
+        main {
+            background: linear-gradient(to bottom, #6772947e, rgba(98, 255, 59, 0.123));
+                        
+            
+            margin-bottom: 80px;
+            border-radius: 10px;
+            text-align: center;
+           padding-left: 48px;
+           padding-bottom: 10px;
+            
+        }
+        
+       
+        h1 {
+            text-align: center;
+            margin-top: 2em;
+          }
+          
+          /* Párrafos */
+          p {
+            margin: 1em 0;
+            padding: 0 1em;
+            text-align: justify;
+          }
+          
+        
+      
+        
+        
+    
+
+#consulta{
+    background: linear-gradient(to bottom right, #4c70dbd8, rgba(67, 230, 252, 0.425));   
+     box-shadow:2px  2px  20px grey;  
+    border-radius: 15px;
+    margin: 20px;
+    float: left;
+    display:grid ;
+    justify-content:center;
+    align-content: center;
+    width:10rem;
+    padding: 10px;
+    
+}
+
+#consulta12{
+    background: linear-gradient(to bottom right, #677294, rgba(98, 255, 59, 0.404));    box-shadow:2px  2px  20px grey;  
+    border-radius: 15px;
+    margin: 20px;
+    display:grid ;
+    justify-content:center;
+    
+    
+    padding: 10px;
+    color:black;
+   font-size: 125%;
+   
+
+}
+
+#consulta31{
+    background: linear-gradient(to bottom right, #677294, rgba(98, 255, 59, 0.404));    box-shadow:2px  2px  20px grey;  
+    border-radius: 15px;
+    padding: 10px;
+    margin: 20px;
+    text-align: center;
+    justify-content:center;
+  
+    
+}
+h2{
+  color: black;
+  text-align: center;
+
+}
+#Introduzca{
+  text-align: center;
+}
+
+#matricula{
+    align-items: center;
+    margin-left: 45px;
+    margin-right: 45px;
+    height: 60%; 
+}
+
+#comprobar{
+    padding: 5px;
+    margin: 25px;
+    align-items: center;  
+}
+
+                                                    /* DEPOSITO*/
+
+/*ELMAPS*/
+#maps1{
+    margin-left: 12px;
+    height: 450px;
+}
+#dir{
+    font-size: larger;
+    text-align: center;
+    padding: 10px;
+    color:gainsboro
+}
+
+#btt{
+    float: left;
+    width: 50%;
+    margin-right: 30px;
+    max-height: 350px;
+}
+
+h2{
+    color:white;
+   
+}
+/*------------ASIDE-----------------------------*/
+aside {
+ 
+  justify-content:center;
+  position: fixed;
+  left: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0,255,255,0.3);
+  box-shadow: inset 0px 4px 16px rgba(0, 195, 255, 0.473), 
+              inset 0px 4px 16px rgba(233, 250, 2, 0.315), 
+              inset 0px 4px 16px rgba(221, 245, 5, 0.301), 
+              inset 2px 4px 16px rgba(2, 255, 255, 0.5);
+  
+  border-radius: 100px;
+  font-family: Arial, sans-serif; 
+  padding: 5px;
+}
+
+
+
+
+/*--------------------CONTACT---------------------*/
+
+#nuestrodepo{
+    width: 50%;
+}
+#dmaps{
+    margin: 1%;
+    position: static;
+    }
+
+
+
+#fcons {
+    top: 10%;
+    position: static;
+    margin: 1%;
+    background-color: rgb(163, 106, 180);
+    }
+  
+
+
+.subtitulo{
+   text-shadow:black
+}
+#idf{ 
+    font-weight: bold;
+    }
+#retirada{
+    align-self: center;
+    width: 280px;
+ 
+}
+#pservices{
+    color: blanchedalmond;
+}
+summary{
+    padding: 2%;
+    font-weight: bold;
+    align-items: center;
+    border-radius: 15px;
+    color:white;
+    text-align: center;
+    width: 50%;
+    
+}
+
+    .summaryser{
+        background-color: #333;
+        margin-bottom: 22px;
+        margin-top: 22px;
+        box-shadow:2px  2px  20px grey;   
+    }
+
+    summary:hover{
+    
+    color: #fff;
+    background-color: #333;
+    box-shadow: inset 0px 2px 4px rgba(0,255,255,0.3), 
+                inset 0px 4px 8px rgba(0,255,255,0.3), 
+                inset 0px 8px 16px rgba(0,255,255,0.3);
+    transition: 0.2s;
+    }
+
+
+
+
+/* -------------- TODO FOOTER ---------------------------------*/
+footer {
+    background-color: #04be0417;
+    color: white;
+    text-align: center;
+    padding: 10px;
+  }
+  
+  footer a {
+    color: rgb(194, 230, 62);
+    text-decoration: none;
+  }
+ 

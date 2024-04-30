@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<provincias>
+    <provincia>
+        <nombre>Álava</nombre>
+        <superficie>3034 km²</superficie>
+        <habitantes>331600</habitantes>
+    </provincia>
+    <provincia>
+        <nombre>Albacete</nombre>
+        <superficie>14926 km²</superficie>
+        <habitantes>388270</habitantes>
+    </provincia>
+    <provincia>
+        <nombre>Alicante</nombre>
+        <superficie>5816 km²</superficie>
+        <habitantes>1840000</habitantes>
+    </provincia>
+    <!-- Agrega más provincias según sea necesario -->
+</provincias>

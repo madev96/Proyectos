@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="668.0" prefWidth="919.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controlador.EntradaVehiculosController">
+   <children>
+      <Label layoutX="71.0" layoutY="68.0" text="Día de retirada:" />
+      <Label layoutX="526.0" layoutY="68.0" text="Hora de denuncia:" />
+      <Label layoutX="176.0" layoutY="198.0" text="MARCA:" />
+      <Label layoutX="563.0" layoutY="160.0" text="Nº DE POLICÍA:" />
+      <Label layoutX="172.0" layoutY="232.0" text="MODELO:" />
+      <Label layoutX="178.0" layoutY="266.0" text="COLOR:" />
+      <Label layoutX="164.0" layoutY="163.0" text="MATRÍCULA:" />
+      <Label layoutX="594.0" layoutY="195.0" text="SERVICIO:" />
+      <Label layoutX="54.0" layoutY="395.0" text="COMENTARIOS:" />
+      <Label layoutX="120.0" layoutY="339.0" text="TIPO DE VEHÍCULO:" />
+      <Label layoutX="596.0" layoutY="237.0" text="MOTIVO:" />
+      <Label layoutX="254.0" layoutY="68.0" text="Hora de entrada:" />
+      <Label layoutX="603.0" layoutY="312.0" text="GRÚA:" />
+      <Label layoutX="566.0" layoutY="276.0" text="CONDUCTOR:" />
+      <Label layoutX="701.0" layoutY="68.0" text="Hora de retirada:" />
+      <Label layoutX="601.0" layoutY="348.0" text="PLAZA:" />
+      <Label layoutX="175.0" layoutY="304.0" text="ESTADO:" />
+      <DatePicker fx:id="dtpDiaRetirada" layoutX="54.0" layoutY="91.0" />
+      <DatePicker fx:id="dtpFechaEntrega" layoutX="244.0" layoutY="90.0" />
+      <ComboBox fx:id="cmbClientes1" layoutX="473.0" layoutY="90.0" prefWidth="150.0" />
+      <ComboBox fx:id="cmbClientes" layoutX="664.0" layoutY="90.0" prefWidth="150.0" />
+      <TextField layoutX="245.0" layoutY="159.0" />
+      <ComboBox editable="true" layoutX="245.0" layoutY="194.0" prefWidth="150.0" />
+      <ComboBox editable="true" layoutX="245.0" layoutY="228.0" prefWidth="150.0" />
+      <ComboBox layoutX="245.0" layoutY="261.0" prefWidth="150.0" />
+      <ComboBox layoutX="245.0" layoutY="300.0" prefWidth="150.0" />
+      <ComboBox layoutX="245.0" layoutY="336.0" prefWidth="150.0" />
+      <ComboBox editable="true" layoutX="671.0" layoutY="156.0" prefWidth="150.0" />
+      <ComboBox layoutX="671.0" layoutY="194.0" prefWidth="150.0" />
+      <ComboBox layoutX="672.0" layoutY="228.0" prefWidth="150.0" />
+      <ComboBox layoutX="671.0" layoutY="274.0" prefWidth="150.0" />
+      <ComboBox layoutX="672.0" layoutY="313.0" prefWidth="150.0" />
+      <ComboBox layoutX="671.0" layoutY="349.0" prefWidth="150.0" />
+      <TextField layoutX="164.0" layoutY="395.0" prefHeight="56.0" prefWidth="658.0" />
+      <Button fx:id="btnGrabar" layoutX="360.0" layoutY="459.0" mnemonicParsing="false" prefHeight="131.0" prefWidth="227.0" text="DAR ENTRADA">
+         <font>
+            <Font size="18.0" />
+         </font></Button>
+      <Label layoutX="368.0" layoutY="27.0" prefHeight="27.0" prefWidth="258.0" text="NÚMERO DE REGISTRO:">
+         <font>
+            <Font size="18.0" />
+         </font></Label>
+     <Button fx:id="btnVolver" focusTraversable="false" layoutX="680.0" layoutY="540.0" mnemonicParsing="false" onAction="#closeWindows" prefHeight="56.0" prefWidth="149.0" text="VOLVER" />
+      <DatePicker layoutX="10.0" layoutY="135.0" />
+   </children>
+</AnchorPane>

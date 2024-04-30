@@ -1,0 +1,123 @@
+/* Estilos para el cuerpo de la página */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilos para el encabezado */
+header {
+    background-color: #333;
+    
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+}
+
+h1 {
+    font-size: 36px;
+}
+
+/* Estilos para la barra de navegación */
+nav {
+    background-color: #333;
+    text-align: center;
+    padding: 10px;
+}
+
+
+
+nav a {
+    text-decoration: none;
+    color: #fff;
+    margin: 10px;
+    font-size: 30px;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #00bcd4;
+}
+
+/* Estilos para el div con la clase "divsPrincipales" */
+.divsPrincipales {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 20px;
+    margin: 20px auto; /* Centra el div horizontalmente */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: 800px; /* Limita el ancho para que sea más responsive */
+    margin-top: 20px; /* Añade un margen superior para separar los elementos */
+}
+
+/* Estilos para el formulario dentro de "divsPrincipales" */
+#formconsultaVehiclo {
+    text-align: center;
+}
+
+/* Estilos para las etiquetas de los formularios */
+label {
+    display: block;
+    font-weight: bold;
+}
+
+/* Estilos para el campo de entrada de matrícula */
+#matricula {
+        border: 1px solid #ccc;
+        width: 40%; /* Aumenta el ancho del campo de entrada al 80% del contenedor */
+        height: 70px;
+        font-size: 30px; /* Ajusta el tamaño de la fuente a 16px */
+        text-align: center;;
+
+    
+    
+}
+
+/* Estilos para el botón de "Comprobar" en el formulario */
+#comprobar {
+    background-color: #00bcd4;
+    color: #fff;
+    padding: 10px 20px;
+    margin: 10px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: 40%; /* Aumenta el ancho del campo de entrada al 80% del contenedor */
+    height: 110px;
+    font-size: 30px; /* Ajusta el tamaño de la fuente a 16px */
+    text-align: center;;
+}
+
+#comprobar:hover {
+    background-color: #007c87;
+}
+
+.divEnColaboracion {
+    padding-bottom: 10px;
+    margin: 2px auto; /* Centra el div horizontalmente */
+    text-align: center;
+    max-width: 800px; /* Limita el ancho para que sea más responsive */
+    margin-top: 20px; /* Añade un margen superior para separar los elementos */
+}
+
+/* Estilos para el pie de página */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+}
+
+/* Estilos para los enlaces */
+a {
+    color: #00bcd4;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+a:hover {
+    color: #007c87;
+}

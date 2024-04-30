@@ -1,0 +1,167 @@
+<!--http://localhost/Proyectos/Gr%C3%BAa%20Web%202/index.html-->
+
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>Grúa Municipal - Beteta</title>
+    <meta charset="UTF-8">
+    <meta name="description"content="Web de la grúa municipal de Alcalá de Henares">
+    <meta name="ketwords" content="HTML, CSS, JavaScript">
+    <link href="estilos.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="./css/bootstrap.min.css"> <!--bootstrap-->
+
+</head>
+<body>
+
+    <header>    
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="index.html">Grúa municipal de Alcalá de Henares</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link" aria-current="page" href="tasas.html">Tasas</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="documentacion_necesaria.html">Documentación necesaria</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="preguntas_frecuentes.html">Preguntas frecuentes</a>
+                  </li>
+                 
+                </ul>
+              </div>
+            </div>
+        </nav>
+    </header>
+ 
+    <main>    
+   
+    <!--CALCULADOR DE TASAS.-->
+    <div class="divsPrincipales" id="calculador">
+        <h2>Calculador de tasa.</h2>
+        <p>Seleccione las fechas para determinar el importe que debería abonar en ese caso.</p><br>
+        <form id="dateTimeCalculator">
+            <label for="fechaEntrada">Fecha de entrada:</label><br>
+            <input type="datetime-local" class="calculoFecha" id="fechaEntrada" name="fechaEntrada"  required>
+            <br>
+            
+            <label for="fechaSalida">Fecha de salida:</label>
+            <input type="datetime-local" class="calculoFecha" id="fechaSalida" name="fechaSalida" required>
+            <br><br><br>
+            <button id="btnCalcular" type="button" onclick="calcular()">Calcular el precio</button>
+        </form>
+
+        <p id="resultado"></p>
+        <p id="resultado2"></p>
+
+        <script>
+            function calcular() {
+                const fechaEntrada = new Date(document.getElementById('fechaEntrada').value);
+                const fechaSalida = new Date(document.getElementById('fechaSalida').value);
+
+                if (!isNaN(fechaEntrada) && !isNaN(fechaSalida)) {
+                    if (fechaEntrada < fechaSalida) {
+                        const diffTiempo = fechaSalida - fechaEntrada;
+                        const diffDias = Math.floor(diffTiempo / (1000 * 60 * 60 * 24)); //Math foor se usa para redondear el resultado al número entero
+                        const diffHoras = Math.floor((diffTiempo % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                        const diffMinutos = Math.floor((diffTiempo % (1000 * 60 * 60)) / (1000 * 60));
+
+                        document.getElementById('resultado').textContent = ` ${diffDias} día/s, ${diffHoras} hora/s y ${diffMinutos} minuto/s.`;
+                        //INTENTO EMPEZAR EL CÁLCULO.
+                        if (diffDias == 0){
+                            switch (diffHoras) {
+                                case 0:
+                                    document.getElementById('resultado2').textContent =` La tasa es de: 183,86€`;
+                                    break;
+                                case 1:
+                                    document.getElementById('resultado2').textContent =` La tasa es de: 185,49€`;
+                                    break;
+                                case 2:
+                                    document.getElementById('resultado2').textContent =` La tasa es de: 187,12€`;
+                                    break;
+                                case 3:
+                                    document.getElementById('resultado2').textContent =` La tasa es de: 188,75€`;
+                                    break;
+                                case 4:
+                                    document.getElementById('resultado2').textContent =` La tasa es de: 190,38€`;
+                                    break;
+                                case 5:
+                                    document.getElementById('resultado2').textContent =`La tasa es de: 192,01€ `;
+                                    break;
+                                case 6:
+                                    document.getElementById('resultado2').textContent =` La tasa es de: 193,64€`;
+                                    break;
+                                case 7:
+                                    document.getElementById('resultado2').textContent =` La tasa es de: 195,27€`;
+                                    break;
+                                case 8:
+                                    document.getElementById('resultado2').textContent =` La tasa es de: 196,75€`;
+                                    break;
+                                default:
+                                    document.getElementById('resultado2').textContent =`La tasa es de: 196,75€`;
+                            }
+
+                        } else if (diffDias <= 20){
+                            var tasa= 196.75 + (diffDias * 15,25);
+                            document.getElementById('resultado2').textContent =`La tasa es de:` . tasa;
+                        }
+                    } else {
+                    document.getElementById('resultado').textContent = "La hora de entrada no puede ser igual o posterior a la de salida.";
+                    }
+                } else {
+                    document.getElementById('resultado').textContent = "Ingresa fechas y horas válidas.";
+                }
+            }
+        </script>
+    </div>
+    <!--TASAS APLICABLES.-->
+    <div class="divsPrincipales" id="tasas">
+        <h2>Tasas aplicables</h2>
+        <p>Año 2018 BOCM</p>
+        <p>Se puede consultar la <a href="https://www.bocm.es/bocm-20180509-35" target="_blank"> Ordenanza Reguladora de la Tasa por Retirada de Vehículos de la Vía Pública.</a></p> 
+    </div>
+    <!--FORMA PAGO.-->
+    <div class="divsPrincipales" id="">
+        <h2>Forma de pago</h2>
+        <p>Pago único en el momento de la gestión de la retirada en el depósito.</p>
+        <table border="2"> <!--este borde lo tengo que hacer en CSS-->
+            <tr>
+                <th>Métodos disponibles:</th>
+            </tr>
+            <tr>
+                <td>Efectivo</td>
+            </tr>
+            <tr>
+                <td>Tarjeta</td>
+            </tr>
+            <tr>
+                <td>Efectivo + Tarjeta</td>
+            </tr>
+        </table>
+        <p>Las tarjetas aceptadas son: MasterCard....</p>
+    </div>
+    <!--EXENTOS-->
+    <div class="divsPrincipales" id="">
+        <h2>Exentos abono tasas.</h2>
+        <p>En la aplicación de lo dispuesto en artículo XXX de la Ordenaza de Movilidad Sostenible para la Ciudad de Beteta, no devengará tasa de retirada y los gastos de depósito los siguientes supestos: </p>
+        <ul>
+            <li>En los casos de de sustracción ni cuando el servicio de retirada del vehículo se preste con el objeto de permitir la realización de obras en la vía públic</li>
+            <li>aquellas actuaciones que para las que se cuente con la debida autorización administrativa, salvo que haya sido debidamente anunciada y señalizada con cuarenta y ocho horas de antelación.</li>
+        </ul>
+    </div>
+    <!--RESUMEN TASAS-->
+    <div class="divsPrincipales" id="">
+        <h2>Resumen de las tasas con IVA aplicado.</h2>
+        <p>Ver el resumen <a href="https://www.bocm.es/bocm-20180509-35" target="_blank">Aquí</a></p>
+    </div>
+
+    </main>
+    <script src="js/bootstrap.bundle.min.js"></script> <!--bootstrap-->
+
+</body>
+</html> 

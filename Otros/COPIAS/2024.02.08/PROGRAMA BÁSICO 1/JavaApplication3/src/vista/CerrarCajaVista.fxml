@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="526.0" prefWidth="769.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controlador.CerrarCajaController">
+   <children>
+      <Button fx:id="btnSi" layoutX="262.0" layoutY="214.0" mnemonicParsing="false" onAction="#handleBtnSiClick" prefHeight="72.0" prefWidth="108.0" text="Sí" textFill="#3fa813">
+         <font>
+            <Font size="36.0" />
+         </font></Button>
+      <Button fx:id="btnNo" layoutX="400.0" layoutY="214.0" mnemonicParsing="false" onAction="#closeWindows" prefHeight="72.0" prefWidth="108.0" text="No" textFill="#cd0909">
+         <font>
+            <Font size="36.0" />
+         </font></Button>
+      <Label alignment="CENTER" layoutX="10.0" layoutY="6.0" prefHeight="106.0" prefWidth="749.0" text="¿Desea cerrar la caja?" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0">
+         <font>
+            <Font size="48.0" />
+         </font>
+      </Label>
+      <Separator layoutX="10.0" layoutY="112.0" prefHeight="22.0" prefWidth="600.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" />
+   </children>
+</AnchorPane>

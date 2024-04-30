@@ -1,0 +1,79 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>Grúa Municipal | Beteta</title>
+    <meta charset="UTF-8">
+    <meta name="description"content="Web de la grúa municipal de Alcalá de Henares">
+    <meta name="ketwords" content="HTML, CSS, JavaScript">
+    <link href="estilos.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+
+    <header>
+        
+        <a href="index.html"  class="encabezado">                                              
+            <h1 id="tituloheader">GRÚA MUNICIPAL DE BETETA</h1>
+        </a>
+      
+        <nav>   
+            <a href="ubicacion.html" >Ubicación</a>
+            <a href="tasas.html" >Tasas</a> 
+            <a href="documentacion_necesaria.html" >Documentación necesaria</a> 
+            <a href="preguntas_frecuentes.html" >Preguntas frecuentes</a>
+            <p>En colaboración con: 
+                <a href="www.policia.com" >Policía Local</a> 
+                y <a href="www.http://aytobeteta.es" >Ayuntamiento de Beteta</a> </p>
+
+        </nav>
+    </header>
+   
+<!--CALCULADOR DE TASAS.-->
+
+<div class="divsPrincipales" id="calculador">
+    <h2>Calculador de tasa.</h2>
+    <form id="dateTimeCalculator">
+        <p>Entrada en el depósito</p>
+        <label for="fechaEntrada">Fecha y hora:</label>
+        <input type="datetime-local" id="fechaEntrada" name="fechaEntrada" required>
+        <br>
+        <p>Salida del depósito</p>
+        <label for="fechaSalida">Fecha y hora:</label>
+        <input type="datetime-local" id="fechaSalida" name="fechaSalida" required>
+        <br><br>
+        <button type="button" onclick="calcularDiferencia()">Calcular</button>
+    </form>
+
+    <p id="resultado"></p>
+
+    <script>
+        function calcularDiferencia() {
+            const fechaEntrada = new Date(document.getElementById('fechaEntrada').value);
+            const fechaSalida = new Date(document.getElementById('fechaSalida').value);
+
+            if (!isNaN(fechaEntrada) && !isNaN(fechaSalida)) {
+                if (fechaEntrada <= fechaSalida) {
+                    const diffTiempo = fechaSalida - fechaEntrada;
+                    const diffDias = Math.floor(diffTiempo / (1000 * 60 * 60 * 24)); //Math foor se usa para redondear el resultado al número entero
+                    const diffHoras = Math.floor((diffTiempo % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                    const diffMinutos = Math.floor((diffTiempo % (1000 * 60 * 60)) / (1000 * 60));
+
+                    document.getElementById('resultado').textContent = `La tiempo en depósito es de ${diffDias} día/s, ${diffHoras} hora/s y ${diffMinutos} minuto/s.`;
+                } else {
+                    document.getElementById('resultado').textContent = "La hora de entrada no puede ser posterior a la de salida.";
+                }
+            } else {
+                document.getElementById('resultado').textContent = "Ingresa fechas y horas válidas.";
+            }
+        }
+    </script>
+</div>
+
+<div class="divsPrincipales">
+    <p> Las tasas oficiales que se publican en el BOE aparecen sin el incremento del I.V.A aplicado.</p>
+</div>
+<div class="divsPrincipales">
+    <p>Resumen de las tasas oficiales con el IVA aplicado.</p>
+</div>
+</body>
+</html> 

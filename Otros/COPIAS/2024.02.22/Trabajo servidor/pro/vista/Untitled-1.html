@@ -1,0 +1,59 @@
+
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda en línea</title>
+    <link rel="stylesheet" href="\vista\css\styles.css">  
+    <script src="\vista\js\funcionalidades.js"></script>
+
+    
+</head>
+<body>
+    <header>    
+        <div class="top-bar">
+            <div class="logo">
+                <img src="\vista\img/logo.png" alt="Logo de la tienda">
+            </div>
+           
+        </div>
+        
+        <nav class="main-nav">
+            <ul>
+                <li>
+                <li><a href="V_perfil.php">Mi perfil</a></li>
+                <li><a href="V_carrito.php">Mi carrito</a></li>
+                <br>
+                
+
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+    <section class="category-section">
+            <h2 id="catalogo">Catálogo</h2>
+            <br>
+            <div class="categories">
+               
+                    <div class="product">
+                        <!-- Generar el HTML dinámicamente utilizando los datos de la base de datos -->
+                        <img src="" alt="">
+                      
+                        <div class="cantidad">
+                            <button class="aumentar">+</button>
+                            <input type="text" class="cantidad-input" value="0" readonly>
+                            <button class="disminuir">-</button>
+                        </div>
+                    </div>
+               
+            </div>
+        </section>
+        
+    </main>
+</body>
+</html>
+
+

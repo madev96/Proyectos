@@ -1,0 +1,57 @@
+
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maresp - Tienda Online</title>
+    <link rel="stylesheet" href="vista\css\styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+          
+        </nav>
+    </header>
+
+    <main>
+      
+        <div class="container">
+            <div id="imgLogo">
+                <img src="vista\img/logo.png" width="30%">   
+            </div>
+            <form name="formularioLogin" method="post" action="modelo/conexion.php" class="login-form">
+                <input type="email" placeholder="Correo electrónico" name="email"  required>
+                <br>
+                <input type="password" placeholder="Contraseña" name="contraseña" required>
+                <br>
+                <p id="mensajeError" style="color: red; display: none;">Las credenciales proporcionadas no son válidas.<br><br> Por favor, verifica tu información e intenta de nuevo.</p>
+                <br>
+                <button type="submit">Iniciar Sesión</button>
+            </form>
+            <br>
+            
+            <br>
+            <div class="social-login" >
+                <button class="google">Iniciar con Google</button>
+                <button class="facebook" >Iniciar con Facebook</button>
+            </div>
+            <p class="register-link">¿No tienes cuenta?</p>
+            <a href="vista\V_registrarme.php">Regístrate aquí</a>
+        </div>
+
+    
+        <script>
+            // Obtener el parámetro 'error' de la URL
+            const urlParams = new URLSearchParams(window.location.search);
+            
+            // Verificar si el parámetro 'error' está presente y es igual a 'credenciales'
+            if (urlParams.has('error') && urlParams.get('error') === 'credenciales') {
+                // Mostrar el mensaje de error
+                document.getElementById('mensajeError').style.display = 'block';
+            }
+        </script>
+    </main>
+</body>
+</html>

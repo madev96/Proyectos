@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="509.0" prefWidth="1290.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controlador.ConsultarFacturasController">
+   <children>
+      <TreeTableView layoutX="35.0" layoutY="91.0" prefHeight="320.0" prefWidth="1228.0">
+        <columns>
+          <TreeTableColumn fx:id="ttcNumFact" prefWidth="75.0" text="Nº Factura" />
+          <TreeTableColumn fx:id="ttcDNI" prefWidth="75.0" text="Fecha de factura" />
+            <TreeTableColumn fx:id="ttcNombre" prefWidth="141.0" text="Matrícula" />
+            <TreeTableColumn fx:id="ttcMatricula" prefWidth="75.0" text="Matrícula" />
+            <TreeTableColumn fx:id="ttcMarca" prefWidth="75.0" text="DNI" />
+            <TreeTableColumn fx:id="ttcFechaFactura" prefWidth="108.0" text="Cliente" />
+            <TreeTableColumn fx:id="ttcNumReg" prefWidth="99.0" text="Base imponible" />
+            <TreeTableColumn fx:id="ttcModelo" prefWidth="126.0" text="Cuota I.V.A" />
+            <TreeTableColumn fx:id="ttcFechaEntrada" prefWidth="104.0" text="Total factura" />
+            <TreeTableColumn fx:id="ttcFormaPago" prefWidth="226.0" text="Sin cargo" />
+        </columns>
+      </TreeTableView>
+      <Label layoutX="465.0" layoutY="18.0" prefHeight="53.0" prefWidth="376.0" text="Consulta de facturas">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Label>
+      <Button fx:id="btnVolver" layoutX="35.0" layoutY="440.0" mnemonicParsing="false" onAction="#closeWindows" text="VOLVER">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

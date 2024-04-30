@@ -1,0 +1,80 @@
+<!--http://localhost/Proyectos/Gr%C3%BAa%20Web%202/index.html-->
+
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>Grúa Municipal - Beteta</title>
+    <meta charset="UTF-8">
+    <meta name="description"content="Web de la grúa municipal de Alcalá de Henares">
+    <meta name="ketwords" content="HTML, CSS, JavaScript">
+    <link href="estilos.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="./css/bootstrap.min.css"> <!--bootstrap-->
+</head>
+<body>
+
+    <header>
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid">
+              <a href="https://www.ejemplo.com">
+                <img src="g.png" alt="Descripción de la imagen" width="400px" height="100px">
+              </a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link" aria-current="page" href="tasas.html">Tasas</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="documentacion_necesaria.html">Documentación necesaria</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="preguntas_frecuentes.html">Preguntas frecuentes</a>
+                  </li>
+                 
+                </ul>
+              </div>
+            </div>
+        </nav>
+    </header>
+    <main>    
+      
+     
+        <!--atención al ciudadano-->   
+        <div class="divsPrincipales" id="consultaVehiculo">                                 
+            <h2>Atención<a href="tel:+34918786844" >  telefónica</a>
+                y  <a href="https://www.google.es/maps/place/Gr%C3%BAa+Municipal+de+Alcal%C3%A1+de+Henares/@40.4838512,-3.3862214,17z/data=!3m1!4b1!4m6!3m5!1s0xd42499f577e3769:0x7a62c38e5efb88ce!8m2!3d40.4838471!4d-3.3836465!16s%2Fg%2F11bwpz6ykd?entry=ttu" target="_blank" >presencial</a>               <!--aquí tengo que hacer que si se parte el párrafo que sea por donde quiero-->
+                las 24 horas todos los días.</h2>  
+        </div>
+        <!--ha retirado la grúa mi vehículo-->   
+        <div class="divsPrincipales" id="consultaVehiculo">                                          
+            <h2>¿Ha retirado la grúa mi vehículo?</h2>  
+            <form id="formconsultaVehiclo" name="formulario" method="get" action="matriculas.php">     
+                <label id="labMatricula">Introduzca la matrícula para comprobarlo.</label><br>
+                        <input id="matricula" placeholder="1234XYZ " name="matricula" value="" type ="text"> <br><br>
+                        <input  id="comprobar" type ="submit"  value="Comprobar" size="50%"> 
+            </form>
+        </div>
+        <div class="divsPrincipales" id="consulta31">                        <!--¿DÓNDE ESTÁ EL DEPÓSITO?-->
+            <h2>¿Dónde está el depósito?</h2>  
+            <iframe id="maps" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3034.6118574306943!2d-3.386221424260664!3d40.48385115155189!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd42499f577e3769%3A0x7a62c38e5efb88ce!2sGr%C3%BAa%20Municipal%20de%20Alcal%C3%A1%20de%20Henares!5e0!3m2!1ses!2ses!4v1698426737985!5m2!1ses!2ses"  style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            
+            <figcaption id="dir"> <b>Dirección:</b> Carr. de la Cuesta, 3, 16870 Beteta, Cuenca</figcaption>
+        </div>
+    </main>
+    <script src="js/bootstrap.bundle.min.js"></script> <!--bootstrap-->
+</body>
+
+
+<footer>            
+    <!--<small>NOSOTROS:La Grúa Municipal de Beteta es un servicio público que tiene como objetivo garantizar la seguridad vial y el cumplimiento de las normativas de tráfico en nuestro pueblo.Nuestro equipo de profesionales altamente capacitados se encarga de retirar los vehículos mal estacionados, abandonados o que obstaculizan el tráfico en las calles de Betetea. De esta manera, se busca mejorar la fluidez del tráfico y garantizar la seguridad de peatones y conductores.
+    Además, el servicio de la Grúa Municipal también se encarga de depositar los vehículos en nuestro depósito municipal, donde se garantiza la seguridad y custodia de los mismos.
+    Nos esforzamos por brindar un servicio eficiente y de calidad a todos los ciudadanos, y estamos a su disposición las 24 horas del día, los 7 días de la semana. Si necesita de nuestros servicios, no dude en contactar con la Policía Local  a través del número de teléfono [ 092  ].
+    Agradecemos su colaboración y compromiso en el cumplimiento de las normativas de tráfico y seguridad vial en nuestra ciudad.</small>
+    <br><br>  -->                                
+    <small>&copy; 2023 Todos los derechos reservados.  <a id="mlm" href="https://www.linkedin.com/in/manuel-lozano-mart%C3%ADnez-ab7160204/"> <b>M.L</b></a></small>      
+</footer>
+
+</html>

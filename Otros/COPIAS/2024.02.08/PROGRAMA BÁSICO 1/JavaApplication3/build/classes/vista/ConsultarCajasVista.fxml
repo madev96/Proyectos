@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="500.0" prefWidth="997.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controlador.ConsultarCajasController">
+   <children>
+      <Button fx:id="btnVolver" layoutX="863.0" layoutY="420.0" mnemonicParsing="false" onAction="#closeWindows" text="Volver">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Button>
+      <TableView fx:id="tabla" layoutX="59.0" layoutY="77.0" prefHeight="308.0" prefWidth="904.0">
+        <columns>
+          <TableColumn fx:id="usuario" prefWidth="75.0" text="Usuario" />
+          <TableColumn fx:id="turno" prefWidth="75.0" text="Turno" />
+            <TableColumn fx:id="horaDeApertura" prefWidth="106.0" text="Hora de apertura" />
+            <TableColumn fx:id="horaDeCierre" prefWidth="89.0" text="Hora de cierre" />
+            <TableColumn fx:id="facturasEmitidas" prefWidth="107.0" text="Facturas emitidas" />
+            <TableColumn fx:id="efectivo" prefWidth="77.0" text="Efectivo" />
+            <TableColumn fx:id="tarjeta" prefWidth="68.0" text="Tarjeta" />
+            <TableColumn fx:id="totalDInero" prefWidth="92.0" text="Total dinero" />
+            <TableColumn fx:id="dineroEnCaja" prefWidth="95.0" text="Dinero en caja" />
+            <TableColumn fx:id="dineroEnVehiculos" prefWidth="119.0" text="Dinero en vehículos" />
+        </columns>
+      </TableView>
+      <Label layoutX="59.0" layoutY="14.0" text="Consultar cajas">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

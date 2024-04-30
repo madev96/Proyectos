@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CIUDADES>
+    <CIUDAD>
+        <CODIGO>Seleccione una ciudad</CODIGO>
+        <NOMBRE>Seleccione una ciudad</NOMBRE>
+        <HABITANTES>Seleccione una ciudad</HABITANTES>
+    </CIUDAD>
+    <CIUDAD>
+        <CODIGO>08001</CODIGO>
+        <NOMBRE>Barrio Gótico</NOMBRE>
+        <HABITANTES>27,283</HABITANTES>
+    </CIUDAD>
+    <CIUDAD>
+        <CODIGO>08003</CODIGO>
+        <NOMBRE>El Born</NOMBRE>
+        <HABITANTES>48,783</HABITANTES>
+    </CIUDAD>
+    <CIUDAD>
+        <CODIGO>08004</CODIGO>
+        <NOMBRE>Barceloneta</NOMBRE>
+        <HABITANTES>15,159</HABITANTES>
+    </CIUDAD>
+    <CIUDAD>
+        <CODIGO>08005</CODIGO>
+        <NOMBRE>Poblenou</NOMBRE>
+        <HABITANTES>120,887</HABITANTES>
+    </CIUDAD>
+    <!-- Agrega más ciudades de Barcelona según sea necesario -->
+</CIUDADES>
