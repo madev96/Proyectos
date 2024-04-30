@@ -3,3 +3,7 @@ body {
   color: azure;
   text-align: center;
 }
+
+#app {
+  margin: 0 auto;
+}
