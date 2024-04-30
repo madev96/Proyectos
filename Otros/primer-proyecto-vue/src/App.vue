@@ -1,12 +1,12 @@
 <script setup>
-import { ref, reactive } from 'vue'
-const taller = 'Taller la tuerca 🛠️'
+import { ref, reactive } from 'vue';
+const taller = 'Taller la tuerca 🛠️';
 //ref, que necesita value para editar el valor.
-const servicio1 = ref('Básico')
-const servicio2 = ref('Especial')
+const servicio1 = ref('Básico');
+const servicio2 = ref('Especial');
 
-//actualiziao el servicio2
-servicio2.value = 'Premium'
+//actualizado el servicio2
+servicio2.value = 'Premium';
 
 //reactive, que NO necesita value para editar el valor.
 const repuesto1 = reactive({
@@ -14,10 +14,10 @@ const repuesto1 = reactive({
   nombre: 'filtro de aceite',
   precio: 100,
   disponibilidad: true
-})
+});
 
-//actualiziao el respuesto1
-repuesto1.disponibilidad = false
+//actualizado el repuesto1
+repuesto1.disponibilidad = false;
 </script>
 
 <template>
@@ -30,7 +30,7 @@ repuesto1.disponibilidad = false
   <hr />
   <h3>Repuestos</h3>
   <section>
-    <p>{{ respuesto1.nombre }} ... {{ respuesto1.precio }} Euros</p>
+    <p>{{ repuesto1.nombre }} ... {{ repuesto1.precio }} Euros</p>
   </section>
 </template>
 
