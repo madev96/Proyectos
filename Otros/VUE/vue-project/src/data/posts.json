@@ -1,0 +1,14 @@
+[
+  {
+    "userId": 1,
+    "id": 1,
+    "title": "Pinia goals",
+    "body": "Pinia es a sotre library for Vue, it allow... nose qué mas"
+  },
+  {
+    "userId": 1,
+    "id": 2,
+    "title": "Por que vue 3 bien?",
+    "body": "Vue 3 nose ke nose ke nose kuantos ry for Vue, it allow... nose qué mas"
+  }
+]
