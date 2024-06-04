@@ -59,10 +59,12 @@ Route::get('/exportar-ventas', function () {
 });
 
 Route::get('/exportar-usuarios', function () {
-    return view('exportes.usuarios');
+    $usuarios = User::all();
+    return view('exportes.usuarios', compact('usuarios'));
 });
 Route::get('/exportar-departamentos', function () {
-    return view('exportes.departamentos');
+    $departamentos = Departamento::all();
+    return view('exportes.departamentos', compact('departamentos'));
 });
 // ...
 
