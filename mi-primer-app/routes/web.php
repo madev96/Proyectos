@@ -52,11 +52,16 @@ Route::get('/exportar-compras', function () {
     $compras = Compra::all();
     return view('exportes.compras', compact('compras'));
 });
-Route::get('/exportar-ventas', [AdminController::class, 'exportarVentas']);
+
+Route::get('/exportar-ventas', function () {
+    $ventas = Venta::all();
+    return view('exportes.ventas', compact('ventas'));
+});
 
 Route::get('/exportar-usuarios', function () {
     return view('exportes.usuarios');
-});Route::get('/exportar-departamentos', function () {
+});
+Route::get('/exportar-departamentos', function () {
     return view('exportes.departamentos');
 });
 // ...

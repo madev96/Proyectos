@@ -70,13 +70,6 @@ class AdminController extends Controller
         return view('ventas',  compact('usuarios', 'ventas'));
     }
 
-// En el controlador AdminController
-public function exportarVentas()
-{
-    $ventas = Venta::all();
-    return view('exportes.ventas', compact('ventas'));
-}
-
 
 }
    
