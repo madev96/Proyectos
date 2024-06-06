@@ -14,8 +14,8 @@ class Venta extends Model
      }
 
      protected $fillable = [
-        'precio',          
-        'cantidad',            
+        'cantidad',
+        'precio',            
         'user_id',
     ];
 

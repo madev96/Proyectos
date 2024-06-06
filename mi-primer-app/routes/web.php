@@ -1,75 +1,90 @@
-
 <?php
 
-use App\Http\Controllers\AdminController;
-use App\Models\Compra;
-use App\Models\User;
-use App\Models\Departamento;
-use App\Models\Venta;
-use Illuminate\Support\Facades\Route;
+// Importamos las clases necesarias para este archivo.
+use App\Http\Controllers\AdminController; // Controlador para manejar las solicitudes administrativas.
+use App\Models\Compra; // Modelo que representa la tabla de compras en la base de datos.
+use App\Models\User; // Modelo que representa la tabla de usuarios en la base de datos.
+use App\Models\Departamento; // Modelo que representa la tabla de departamentos en la base de datos.
+use App\Models\Venta; // Modelo que representa la tabla de ventas en la base de datos.
+use Illuminate\Support\Facades\Route; // Facade para definir rutas en la aplicación.
 
-// Agrupar rutas protegidas con el middleware 'auth'
+// Agrupamos todas las rutas que requieren autenticación usando el middleware 'auth'.
+// Esto significa que solo los usuarios autenticados podrán acceder a estas rutas.
 Route::group(['middleware' => 'auth'], function () {
-    
-    // Ruta para la página de inicio
+
+    // Definimos la ruta para la página de inicio.
+    // Cuando el usuario visite la URL raíz ('/'), se cargará la vista 'welcome'.
     Route::get('/', function () {
-        return view('welcome');
+        return view('welcome'); // Retorna la vista 'welcome'.
     });
 
-    // Ruta para la vista de ventas
+    // Definimos la ruta para la página de ventas.
+    // Cuando el usuario visite '/ventas', se ejecutará el método 'getVentas' del 'AdminController'.
     Route::get('/ventas', [AdminController::class, 'getVentas']);
 
-    // Ruta para la vista de compras
+    // Definimos la ruta para la página de compras.
+    // Cuando el usuario visite '/compras', se ejecutará el método 'getCompras' del 'AdminController'.
     Route::get('/compras', [AdminController::class, 'getCompras']);
 
-
-    // Ruta para la vista de departamentos
+    // Definimos la ruta para la página de departamentos.
+    // Cuando el usuario visite '/departamentos', se ejecutará el método 'getDepartamentos' del 'AdminController'.
     Route::get('/departamentos', [AdminController::class, 'getDepartamentos']);
 
-    // Ruta para la vista de usuarios
+    // Definimos la ruta para la página de usuarios.
+    // Cuando el usuario visite '/usuarios', se ejecutará el método 'getUsuarios' del 'AdminController'.
     Route::get('/usuarios', [AdminController::class, 'getUsuarios']);
 
-    // Ruta para la vista de exportes
+    // Definimos la ruta para la página de exportes.
+    // Cuando el usuario visite '/exportes', se cargará la vista 'exportes'.
     Route::get('/exportes', function () {
-        return view('exportes');
+        return view('exportes'); // Retorna la vista 'exportes'.
     });
 
-    // Ruta para las nuevas compras
+    // Definimos la ruta para crear una nueva compra.
+    // Cuando el usuario envíe un formulario a '/nueva-compra' (usando el método POST), se ejecutará el método 'nuevaCompra' del 'AdminController'.
     Route::post('/nueva-compra', [AdminController::class, 'nuevaCompra']);
 
-        // Ruta para las nuevas ventas
+    // Definimos la ruta para crear una nueva venta.
+    // Cuando el usuario envíe un formulario a '/nueva-venta' (usando el método POST), se ejecutará el método 'nuevaVenta' del 'AdminController'.
     Route::post('/nueva-venta', [AdminController::class, 'nuevaVenta']);
 
-
-
-    // Ruta para la vista de perfil
+    // Definimos la ruta para la página de perfil.
+    // Cuando el usuario visite '/perfil', se cargará la vista 'perfil' con los datos del usuario autenticado.
     Route::get('/perfil', function () {
-        return view('perfil');
+        $user = auth()->user(); // Obtiene los datos del usuario autenticado.
+        return view('perfil', compact('user')); // Retorna la vista 'perfil' con los datos del usuario.
     });
 
-   // ...
-Route::get('/exportar-compras', function () {
-    $compras = Compra::all();
-    return view('exportes.compras', compact('compras'));
+    // Definimos la ruta para exportar las compras.
+    // Cuando el usuario visite '/exportar-compras', se obtendrán todas las compras y se cargará la vista 'exportes.compras'.
+    Route::get('/exportar-compras', function () {
+        $compras = Compra::all(); // Obtiene todas las compras de la base de datos.
+        return view('exportes.compras', compact('compras')); // Retorna la vista 'exportes.compras' con las compras.
+    });
+
+    // Definimos la ruta para exportar las ventas.
+    // Cuando el usuario visite '/exportar-ventas', se obtendrán todas las ventas y se cargará la vista 'exportes.ventas'.
+    Route::get('/exportar-ventas', function () {
+        $ventas = Venta::all(); // Obtiene todas las ventas de la base de datos.
+        return view('exportes.ventas', compact('ventas')); // Retorna la vista 'exportes.ventas' con las ventas.
+    });
+
+    // Definimos la ruta para exportar los usuarios.
+    // Cuando el usuario visite '/exportar-usuarios', se obtendrán todos los usuarios y se cargará la vista 'exportes.usuarios'.
+    Route::get('/exportar-usuarios', function () {
+        $usuarios = User::all(); // Obtiene todos los usuarios de la base de datos.
+        return view('exportes.usuarios', compact('usuarios')); // Retorna la vista 'exportes.usuarios' con los usuarios.
+    });
+
+    // Definimos la ruta para exportar los departamentos.
+    // Cuando el usuario visite '/exportar-departamentos', se obtendrán todos los departamentos y se cargará la vista 'exportes.departamentos'.
+    Route::get('/exportar-departamentos', function () {
+        $departamentos = Departamento::all(); // Obtiene todos los departamentos de la base de datos.
+        return view('exportes.departamentos', compact('departamentos')); // Retorna la vista 'exportes.departamentos' con los departamentos.
+    });
+
 });
 
-Route::get('/exportar-ventas', function () {
-    $ventas = Venta::all();
-    return view('exportes.ventas', compact('ventas'));
-});
-
-Route::get('/exportar-usuarios', function () {
-    $usuarios = User::all();
-    return view('exportes.usuarios', compact('usuarios'));
-});
-Route::get('/exportar-departamentos', function () {
-    $departamentos = Departamento::all();
-    return view('exportes.departamentos', compact('departamentos'));
-});
-// ...
-
-
-});
-
+// Incluimos el archivo de rutas de autenticación.
+// Este archivo contiene las rutas necesarias para el registro, inicio de sesión y restablecimiento de contraseña.
 require __DIR__.'/auth.php';
-
