@@ -15,8 +15,6 @@
                 <tr>
                     <th scope="row">{{ $departamento->id }}</th>
                     <td>{{ $departamento->nombre }}</td>
-                    <td>{{ $departamento->nombre }}</td>
-
                 </tr>
                     
                 @endforeach

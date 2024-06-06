@@ -24,10 +24,34 @@ class User extends Authenticatable
      *
      * @var array
      */
+    protected $fillable = [
+        'name',           // Nombre del usuario.
+        'email',          // Correo electrónico del usuario.
+        'departamento_id',// ID del departamento al que pertenece el usuario.
+        'password',       // Contraseña del usuario.
+    ];
 
-    //para las relaciones uno a muchos con compra
-    //retorna un array  con las compras asociadas al usuario.
-     
+    /**
+     * Los atributos que deben estar ocultos para los arrays.
+     * Esto es útil cuando se convierte el modelo a array o JSON para evitar exponer datos sensibles.
+     *
+     * @var array
+     */
+    protected $hidden = [
+        'password',        // Oculta la contraseña del usuario.
+        'remember_token',  // Oculta el token de "recordar" al usuario para sesiones persistentes.
+    ];
+
+    /**
+     * Los atributos que deben ser convertidos a tipos nativos.
+     * Esto asegura que ciertos atributos sean convertidos automáticamente a los tipos especificados.
+     *
+     * @var array
+     */
+    protected $casts = [
+        'email_verified_at' => 'datetime', // Convierte el atributo email_verified_at a un objeto DateTime.
+    ];
+
     // Relación con el modelo Venta
     public function ventas()
     {
@@ -45,32 +69,4 @@ class User extends Authenticatable
     {
         return $this->belongsTo(Departamento::class);
     }
-
-    protected $fillable = [
-        'name',             // Nombre del usuario.
-        'email',            // Correo electrónico del usuario.
-        'departamento_id',  // ID del departamento al que pertenece el usuario.
-        'password',         // Contraseña del usuario.
-    ];
-
-    /**
-     * Los atributos que deben estar ocultos para los arrays.
-     * Esto es útil cuando se convierte el modelo a array o JSON para evitar exponer datos sensibles.
-     *
-     * @var array
-     */
-    protected $hidden = [
-        'password',         // Oculta la contraseña del usuario.
-        'remember_token',   // Oculta el token de "recordar" al usuario para sesiones persistentes.
-    ];
-
-    /**
-     * Los atributos que deben ser convertidos a tipos nativos.
-     * Esto asegura que ciertos atributos sean convertidos automáticamente a los tipos especificados.
-     *
-     * @var array
-     */
-    protected $casts = [
-        'email_verified_at' => 'datetime', // Convierte el atributo email_verified_at a un objeto DateTime.
-    ];
 }

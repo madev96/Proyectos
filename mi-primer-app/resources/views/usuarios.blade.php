@@ -1,6 +1,8 @@
 @extends('layouts.base')
 @section('contenido')
 
+
+
 <div class="container">
     <div class="row col-md-12">
         <table class="table table-stripped">

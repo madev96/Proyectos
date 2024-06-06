@@ -3,33 +3,6 @@
 
 
 <div class="container">
-    <div class="row col-md-12">
-        <table class="table table-stripped">
-            <thead>
-                <tr>
-                    <th scope="col">#</th>
-                    <th scope="col">Cantidad</th>
-                    <th scope="col">Precio</th>
-                    <th scope="col">Usuario</th>
-                    <th scope="col">Departamento</th>
-                </tr>
-            </thead>
-            <tbody>
-                @foreach ($ventas as $venta )
-                <tr>
-                    <th scope="row">{{ $venta->id }}</th>
-                    <td>{{ $venta->cantidad }}</td>
-                    <td>{{ $venta->precio }}</td>
-                    <td>{{ $venta->user->name }}</td>
-                    <td>{{ $venta->user->departamento->nombre }}</td>
-                </tr>
-                @endforeach
-            </tbody> 
-        </table>
-    </div>
-</div>
-
-<div class="container">
     <div class="row col-md-6">
         <form action="{{ url('/nueva-venta')}}" method="post">
             @csrf
@@ -73,6 +46,34 @@
             </button>
         </form>
     </div>
+</div>
+
+<div class="container">
+    <div class="row col-md-12">
+        <table class="table table-stripped">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Cantidad</th>
+                    <th scope="col">Precio</th>
+                    <th scope="col">Usuario</th>
+                    <th scope="col">Departamento</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach ($ventas as $venta )
+                <tr>
+                    <th scope="row">{{ $venta->id }}</th>
+                    <td>{{ $venta->cantidad }}</td>
+                    <td>{{ $venta->precio }}</td>
+                    <td>{{ $venta->user->name }}</td>
+                    <td>{{ $venta->user->departamento->nombre }}</td>
+                </tr>
+                @endforeach
+            </tbody> 
+        </table>
+    </div>
+    
 </div>
 
 @endsection

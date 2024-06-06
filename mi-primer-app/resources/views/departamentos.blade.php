@@ -3,6 +3,28 @@
 
 
 <div class="container">
+    <div class="row col-md-6">
+        <form action="{{ url('/nuevo-departamento')}}" method="post">
+            @csrf
+
+            <label for="nombre"
+            class="form-label">Nombre
+            </label>
+            <input type="text"
+            class="form-control"
+            name="nombre"
+            placeholder="Ingrese el nombre del departamento">
+
+            <br>
+
+            <button type="submit"
+            class="btn btn-primary">
+                Registrar departamento
+            </button>
+        </form>
+    </div>
+</div>
+<div class="container">
     <div class="row col-md-12"><!-- 12 me lo invento yo -->
         <table class="table table-stripped">
             <thead>

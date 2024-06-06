@@ -1,5 +1,7 @@
+<!-- Archivo: resources/views/auth/register.blade.php -->
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -26,9 +28,9 @@
 
                 <label for="departamento_id">Departamento</label>
                 <select name="departamento_id" id="departamento_id" class="form-control" autocomplete="organization-title" required>
-                    <option value="1">Informática</option>
-                    <option value="2">Textil</option>
-                    <option value="3">Alimentos</option>
+                    @foreach ($departamentos as $departamento)
+                        <option value="{{ $departamento->id }}">{{ $departamento->nombre }}</option>
+                    @endforeach
                 </select>
                 
                 <label for="password">Password</label>

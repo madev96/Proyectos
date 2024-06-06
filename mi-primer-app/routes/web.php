@@ -8,6 +8,12 @@ use App\Models\Departamento; // Modelo que representa la tabla de departamentos 
 use App\Models\Venta; // Modelo que representa la tabla de ventas en la base de datos.
 use Illuminate\Support\Facades\Route; // Facade para definir rutas en la aplicación.
 
+// Incluimos el archivo de rutas de autenticación.
+// Este archivo contiene las rutas necesarias para el registro, inicio de sesión y restablecimiento de contraseña.
+
+require __DIR__.'/auth.php';
+
+
 // Agrupamos todas las rutas que requieren autenticación usando el middleware 'auth'.
 // Esto significa que solo los usuarios autenticados podrán acceder a estas rutas.
 Route::group(['middleware' => 'auth'], function () {
@@ -48,6 +54,13 @@ Route::group(['middleware' => 'auth'], function () {
     // Cuando el usuario envíe un formulario a '/nueva-venta' (usando el método POST), se ejecutará el método 'nuevaVenta' del 'AdminController'.
     Route::post('/nueva-venta', [AdminController::class, 'nuevaVenta']);
 
+     // Definimos la ruta para crear un nuevo departamento.
+    // Cuando el usuario envíe un formulario a '/nuevo-departamento' (usando el método POST), se ejecutará el método 'nuevoDepartamento' del 'AdminController'.
+    Route::post('/nuevo-departamento', [AdminController::class, 'nuevoDepartamento']);
+
+    Route::post('/nuevo-usuario', [AdminController::class, 'nuevoUsuario']);
+
+
     // Definimos la ruta para la página de perfil.
     // Cuando el usuario visite '/perfil', se cargará la vista 'perfil' con los datos del usuario autenticado.
     Route::get('/perfil', function () {
@@ -85,6 +98,3 @@ Route::group(['middleware' => 'auth'], function () {
 
 });
 
-// Incluimos el archivo de rutas de autenticación.
-// Este archivo contiene las rutas necesarias para el registro, inicio de sesión y restablecimiento de contraseña.
-require __DIR__.'/auth.php';

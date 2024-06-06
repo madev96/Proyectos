@@ -7,6 +7,7 @@ use App\Models\Compra;
 use App\Models\Departamento;
 use App\Models\Venta;
 use Illuminate\Routing\Controller;
+use Illuminate\Support\Facades\Hash;
 
 class AdminController extends Controller
 {
@@ -40,6 +41,20 @@ class AdminController extends Controller
 
         return view('ventas', compact('usuarios', 'ventas'));
     }
+
+    public function nuevoDepartamento(Request $request)
+    {
+        $departamento = new Departamento();
+        $departamento->nombre = $request->input('nombre');
+
+        $departamento->save();
+
+        $usuarios = User::all();
+        $departamentos = Departamento::withCount('user')->get();//
+
+        return view('departamentos', compact('usuarios', 'departamentos'));
+    }
+
 
 
     //método para mostrar usuarios
