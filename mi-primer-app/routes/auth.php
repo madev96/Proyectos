@@ -15,7 +15,8 @@ use Illuminate\Support\Facades\Route;
 // Rutas accesibles solo para invitados (usuarios no autenticados)
 Route::middleware('guest')->group(function () {
     // Ruta para mostrar el formulario de registro
-    Route::get('register', [RegisteredUserController::class, 'create'])->name('register');
+    Route::get('register', [RegisteredUserController::class, 'create'])
+        ->name('register');
 
     // Ruta para procesar el registro de un nuevo usuario
     Route::post('register', [RegisteredUserController::class, 'store']);
@@ -45,7 +46,7 @@ Route::middleware('guest')->group(function () {
 });
 
 // Rutas accesibles solo para usuarios autenticados
-    Route::middleware('auth')->group(function () {
+Route::middleware('auth')->group(function () {
     // Ruta para mostrar la notificación de verificación de correo electrónico
     Route::get('verify-email', EmailVerificationPromptController::class)
         ->name('verification.notice');

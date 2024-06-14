@@ -1,7 +1,5 @@
-<!-- Archivo: resources/views/auth/register.blade.php -->
-
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -27,11 +25,12 @@
                 <input type="email" class="form-control" name="email" id="email" autocomplete="email" required>
 
                 <label for="departamento_id">Departamento</label>
-                <select name="departamento_id" id="departamento_id" class="form-control" autocomplete="organization-title" required>
-                    @foreach ($departamentos as $departamento)
+                <select name="departamento_id" id="departamento_id" class="form-control" required>
+                    @foreach($departamentos as $departamento)
                         <option value="{{ $departamento->id }}">{{ $departamento->nombre }}</option>
                     @endforeach
                 </select>
+                
                 
                 <label for="password">Password</label>
                 <input type="password" class="form-control" name="password" id="password" autocomplete="new-password" required> 

@@ -7,14 +7,21 @@ use App\Models\Compra;
 use App\Models\Departamento;
 use App\Models\Venta;
 use Illuminate\Routing\Controller;
-use Illuminate\Support\Facades\Hash;
 
 class AdminController extends Controller
 {
-    
+
     // Método para añadir nuevas compras
     public function nuevaCompra(Request $request)
     {
+        //validar cantidad ni 0 ni menor
+        $validatedData = $request->validate([
+            'cantidad' => ['required', 'integer', 'min:1'], // Agregar validación para cantidad
+            'user_id' => ['required', 'integer'],
+            'precio' => ['required', 'numeric', 'min:0'],
+        ]);
+    
+            
         $compra = new Compra();
         $compra->cantidad = $request->input('cantidad');
         $compra->user_id = $request->input('user_id');
@@ -30,6 +37,14 @@ class AdminController extends Controller
     // Método para añadir nuevas ventas
     public function nuevaVenta(Request $request)
     {
+
+        //validar cantidad ni 0 ni menor
+        $validatedData = $request->validate([
+            'cantidad' => ['required', 'integer', 'min:1'], // Agregar validación para cantidad
+            'user_id' => ['required', 'integer'],
+            'precio' => ['required', 'numeric', 'min:0'],
+        ]);
+
         $venta = new Venta();
         $venta->cantidad = $request->input('cantidad');
         $venta->user_id = $request->input('user_id');
@@ -46,7 +61,6 @@ class AdminController extends Controller
     {
         $departamento = new Departamento();
         $departamento->nombre = $request->input('nombre');
-
         $departamento->save();
 
         $usuarios = User::all();
@@ -65,7 +79,7 @@ class AdminController extends Controller
      }
     //método para mostrar departamentos
      public function getDepartamentos(){
-        $departamentos = Departamento::withCount ('user')->get();// $departamentos = Departamento::all(); así sería el original pero se modifica para mostrar la cantidad total.
+        $departamentos = Departamento::withCount('user')->get();
 
         return view('departamentos', compact('departamentos'));
     }

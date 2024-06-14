@@ -13,7 +13,19 @@
             <input type="number"
             class="form-control"
             name="cantidad"
+            id="cantidad"
             placeholder="Ingrese la cantidad de artículos">
+
+            @error('cantidad')
+            <div class="alert alert-danger">{{ $messages }}</div>
+            @enderror
+
+            @if ($errors->has('cantidad'))
+            <div class="alert alert-danger">
+                {{ $errors->first('cantidad') }}
+            </div>
+        @endif
+        
 
             <label for="precio"
             class="form-label">Precio
@@ -21,13 +33,14 @@
             <input type="number"
             class="form-control"
             name="precio"
+            id="precio"
             step="0.1"
             placeholder="Ingrese el precio">
 
             <label for="user_id"
             class="form-label">Usuario
             </label>
-            <select name="user_id" class="form-control">
+            <select name="user_id" id="user_id" class="form-control">
                 <!-- como ya he traído todos los datos de la tabla (en el controllador(Venta.php) uso :all()) -->
                 @foreach ($usuarios as $user)
                 

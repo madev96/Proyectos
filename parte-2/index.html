@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> <!-- w3.css -->
+    <title>Ejemplos W3.CSS</title>
+</head>
+<body>
+    <div class="w3-container">
+
+        <div class="w3-row">
+            <h1>Título</h1>
+        </div>
+
+        <div class="w3-row">
+            <h3>Subtítulo</h3>
+        </div>
+
+        <div class="w3-row">
+            <div class="w3-third"><!-- una de las 3 columnas (ocupan un tercio del espacio cada una- responsive) -->
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab, at corrupti officia doloribus sunt modi quaerat soluta, facere unde aliquid provident. Reprehenderit quam ut architecto ratione eligendi esse dolore. Repellat.
+                </p>
+                <a href="#" class="w3-btn w3-blue">Leer más</a> <!-- efectos para el botón -->
+                <br><br>
+                <a href="#" class="w3-button w3-black">Volver</a> <!-- efectos para el botón -->
+            </div>
+
+            <div class="w3-third">
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab, at corrupti officia doloribus sunt modi quaerat soluta, facere unde aliquid provident. Reprehenderit quam ut architecto ratione eligendi esse dolore. Repellat.
+                </p>
+                <a href="#" class="w3-btn w3-red">Leer más</a> <!-- efectos para el botón -->
+                <br><br>
+                <a href="#" class="w3-button w3-black w3-disabled">Volver</a> <!-- efectos para el botón -->
+            </div>
+
+            <div class="w3-third">
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab, at corrupti officia doloribus sunt modi quaerat soluta, facere unde aliquid provident. Reprehenderit quam ut architecto ratione eligendi esse dolore. Repellat.
+                </p>
+                <a href="#" class="w3-btn w3-white w3-border w3-border-red w3-text-red w3-round-large">Leer más</a> <!-- efectos para el botón -->
+                <br><br>
+                <a href="#" class="w3-button w3-large w3-circle w3-xlarge w3-ripple w3-teal">x</a> <!-- efectos para el botón -->
+            </div>
+        </div>
+
+    </div>
+                                            <br><br><br><br><br><br><br><!-- formulario -->
+    <div class="w3-container">
+        <div class="w3-row">
+            <div class="w3-half">
+                <form action="">
+                    <label for="nombre" class="w3-text-black">Nombre</label>
+                    <input type="text" class="w3-input" name="nombre" placeholder="Ingresa tu nombre"/>
+
+                    <br><br>
+
+                    <label for="email" class="w3-text-black">Correo electrónico</label>
+                    <input type="email" name="email" class="w3-input" placeholder="Ingresa tu email"/>
+
+                    <br>
+                    <label for="ocupacion" class="w3-text-black">Seleccione su estado:
+                    </label>
+
+                    <br><br>
+
+                    <input type="radio" class="w3-radio" name="ocupacion" value="estudiante" checked/>
+                    <label for="">Estudiante</label>
+
+                    <br><br>
+
+                    <input type="radio" name="ocupacion" class="w3-radio" value="empleado"/>
+                    <label for="">Empleado</label>
+                    <select name="valores" class="w3-select">
+                        <option value="1">Valor 1</option>
+                        <option value="2">Valor 2</option>
+                        <option value="3">Valor 3</option>
+                    </select>
+                    
+                    <br><br>
+
+                    <button type="submit" class="w3-btn w3-blue">Enviar</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

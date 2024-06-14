@@ -45,7 +45,7 @@
                     <h5 class="card-title">Departamentos</h5>
                     <p class="card-text">
                         Desde el botón inferior exporte a CLS la tabla de departamentos</p>
-                        <a href="{{ url(' /exportar-departamentos') }}"
+                        <a href="{{ url('/exportar-departamentos') }}"
                         class="btn btn-primary">Exportar</a>
                 </div>
             </div>
